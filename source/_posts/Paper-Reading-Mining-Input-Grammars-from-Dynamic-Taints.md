@@ -1,0 +1,50 @@
+---
+title: 'Paper Reading: Mining Input Grammars from Dynamic Taints'
+date: 2022-11-02
+categories:
+- ["Research Inspiration"]
+---
+
+NOTE: This is a Paper Reading for [Topics in Programming Languages: Automated Testing, Bug Detection, and Program Analysis](https://www.carolemieux.com/teaching/CPSC539L_2022w1.html). The original paper can be found [here](https://doi.org/10.1145/2970276.2970321).
+
+A program usually accepts a formal language as input. Inferring the grammar of this formal language is an important task with many use cases.
+
+- Helps humans understand the structure of the formal language.
+  - Manually writing valid inputs
+  - Reverse Engineering
+- Generate inputs for testing and fuzzing
+
+The authors propose Autogram, a method that infers a Context Free Grammar given a set of sample inputs and a Java program that accepts that set of inputs and uses it in some way. Autogram adapts a Dynamic Taining-based approach: 
+
+- It monitors the data flow of each character within the input, with "the Input Fragment it came from" as the taint.
+- It traces method entries, method exits, field accesses, and array accesses within the execution of the program.
+- From such a trace, the Dynamic Call Tree is reconstructed, and the sets of Intervals (Input Fragments) processed by functions, stored in variables, and returned by functions is derived.
+- This is used to build an Interval Tree, and the Interval Tree is refined into a Pure Input Tree free of conflicting overlaps (resulting from parsers using lookaheads).
+- The pure input tree is assumed to be a Parse Tree, and Production Rules are derived from it. The leaf nodes are considered to be Terminals, and Regular Expressions matching them are learned.
+
+The authors then conduct an experimental study concerning the accuracy and completeness of the inferred Context Free Grammars using "parts of the Java Standard API that are used to process URLs and property files", and "open source projects that implement support for CSV, INI, and JSON formats".
+
+------
+
+However, I had more questions than answers after reading this paper.
+
+- One of the use cases that the authors mentioned is "the grammar vastly simplifies the creation of parsing programs that decompose existing inputs into their constituents". Why don't we directly extract the parsing logic out of the program Autogram runs on?
+- The type of Context Free Grammar inferred by Autogram seems to be an LL(1) Grammar. This type of Grammar is only able to represent simple Grammars, and does not support for Left Recursion, which is pervasive in real-world Grammars. Why don't they infer an LALR(1) Grammar, which is both simple and expressive (it supports representing may real-world Programming Languages). Perhaps, a Hidden Markov Model could be trained to infer the Transitions between the States within the LALR(1) Parse Table should an LALR(1) Grammar be inferred?
+- In the current implementation of Autogram, tracing is efficient, as the authors have mentioned: "millions of calls result in traces of a few Megabytes". However, the current implementation incurs a ~100x performance overhead, and there is a lot of room for performance optimization. Maybe ideas that we have discussed for TaintCheck and Qsym (direct Binary Analysis, preinstrumenting Bytecode, JIT compilation etc.) could be used here?
+- The specific process of refining an Interval Tree into a Pure Interval Tree free of conflicting overlaps is not described clearly in the paper. Why don't the author present an example with figures showing the manipulation of nodes within the Interval Tree during this process? The author also mentions applying "a simple heuristic that assumes left to right processing of the input" to resolve possible ambiguities associated with parsers using lookaheads. However, what is the rationale behind this "simple heuristic"?
+- The specific process of deriving Production Rules from the Pure Interval Tree is also unclear. What do the authors mean by "We can thus check if nodes are compatible and can be used to derive productions for for the same nonterminal symbol"? What is the meaning of "compatible" in this context?
+- The programs used in the experimental study are all open-source programs of very high code quality (containing accurately named variables and functions). However, how well does Autogram work with closed-source programs, and/or programs with low code quality, containing obscure variable and function names? This is frequently the situation we encounter when we try to reverse engineer the (often closed-source and/or obscure) structure of a program's input, one of the major use cases of Autogram.
+
+Also some inspiration and ideas I got from the paper:
+
+- The author mentions that "dynamic tainting allows us to precisely identify which parts of a programs input are read, stored and processed at any point in time". Could this technique be used in a Fuzzing context to identify which bits generated by a Coverage-Guided Fuzzer are used in which sections of a fuzzed program?
+- The logic of building an Interval Tree is very interesting, and it reads like the "Subset Tree" mentioned in the KLEE paper. I conject that both these Tree Structures could be generalized and used in a much wider range of contexts.
+
+------
+
+Feedback from the Class Discussion
+
+- A Context Free Grammar may not capture the structure of binary files.
+- How does the approach compare to unsupervised parsing in NLP or fine-tuning language models, especially with a lot of input?
+- Is it possible to use feedback to improve the mined grammar?
+- From one tree, we infer one set of grammar rules; from 1000 trees, we infer 1000 sets of grammar rules. They are merged together to derive the final Context Free Grammar.

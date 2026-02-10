@@ -1,0 +1,44 @@
+---
+title: "2025-09 Financial Statement"
+date: 2025-09-30
+categories:
+  - Lifestyle
+tags:
+  - Records
+excerpt: 2025-09 Financial Statement
+---
+
+```csv
+date,name,amount
+2025-09-01,Cornell Universi NBS REFUND Monthly Dividend,3195.846
+2025-09-01,ETSY, INC. ETSY.COM*BU BROOKLYN NY,-2.70
+2025-08-31,GANNETT MEDIA CO 888-426-0491 VA,-1.00
+2025-09-02,Payment to Chase card,-200.00
+2025-09-02,MIDJOURNEY INC. MIDJOURNEY.CO CA,-10.80
+2025-09-03,WALMART.COM 800-925-6278 AR,-17.14
+2025-09-03,MIDJOURNEY INC. MIDJOURNEY.CO CA,-103.68
+2025-09-04,WALMART.COM 800-925-6278 AR,-82.54
+2025-09-03,WMT PLUS Sep 2025 800-925-6278 AR,-2.99
+2025-09-07,Coinbase Oakland CA,-20.00
+2025-09-08,Payment to Chase card,-40.00
+2025-09-07,WALMART.COM 800-925-6278 AR,-45.47
+2025-09-10,Payment to Chase card,-118.49
+2025-09-10,WALMART.COM 800-925-6278 AR,-10.70
+2025-09-12,APPLE.COM/BILL 866-712-7753 CA,-10.99
+2025-09-12,Payment to Chase card,-26.40
+2025-09-12,WALMART.COM 800-925-6278 AR,-42.48
+2025-09-15,Payment to Chase card,-1668.52
+2025-09-15,Zelle payment,14.20
+2025-09-17,Payment to Chase card,-170.00
+2025-09-18,OPENAI OPENAI.COM CA,-10.03
+2025-09-20,OPENAI OPENAI.COM CA,-45.07
+2025-09-20,USPS CHANGE OF ADDRESS 800-238-3150 TN,-1.25
+2025-09-22,Payment to Chase card,-118.35
+2025-09-22,Zelle payment,-15.00
+2025-09-23,Payment to Chase card,-240.69
+2025-09-29,Payment to Chase card,-220.00
+2025-09-29,Payment to Chase card,-29.95
+2025-09-29,Zelle payment,-28.00
+```
+
+Total Net: -72.19

@@ -1,0 +1,37 @@
+---
+title: "2025-10 Financial Statement"
+date: 2025-10-31
+categories:
+  - Lifestyle
+tags:
+  - Records                     
+excerpt: 2025-10 Financial Statement
+---
+
+```csv
+date,name,amount
+2025-10-01,Cornell Universi NBS REFUND Monthly Dividend,3195.846
+2025-10-07,APPLE.COM/BILL 800-275-2273 CA 10/07,-7.55
+2025-10-06,WMT PLUS Oct 2025 800-925-6278 AR 10/03,-13.99
+2025-10-03,MIDJOURNEY INC. MIDJOURNEY.CO CA 10/02,-10.80
+2025-10-02,Payment to Chase card 10/02,-258.83
+2025-10-01,980Collegetown T RENT 249185354 WEB ID: 1861072180,-1535.00
+2025-10-01,GANNETT MEDIA CO 888-426-0491 VA 10/01,-16.99
+2025-10-20,Payment to Chase card 10/20,-417.58
+2025-10-19,UBER * PENDING SAN FRANCISCO CA 025806 10/19,-13.99
+2025-10-16,Payment to Chase card 10/16,-110.74
+2025-10-14,Payment to Chase card 10/14,-200.00
+2025-10-14,APPLE.COM/BILL 866-712-7753 CA 10/14,-6.47
+2025-10-12,APPLE COM BILL CUPERTINO CA 384110 10/12,-10.99
+2025-10-10,Payment to Chase card 10/10,-460.53
+2025-10-10,Payment to Chase card 10/10,-84.45
+2025-10-31,Payment to Chase card 10/31,-186.00
+2025-10-31,GANNETT MEDIA CO 888-426-0491 VA 10/31,-16.99
+2025-10-30,MIDJOURNEY INC. SOUTH SAN FRA CA 10/30,10.80
+2025-10-27,Payment to Chase card 10/27,-218.72
+2025-10-27,Payment to Chase card 10/27,-532.32
+2025-10-23,Payment to Chase card 10/23,-228.38
+2025-10-21,OPENAI OPENAI.COM CA 10/21,-45.02
+```
+
+Total Net: -1168.69
