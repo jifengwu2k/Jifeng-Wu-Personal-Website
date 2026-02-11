@@ -2,7 +2,9 @@
 title: How to Make VS Code's Language Detection Sane (and Deterministic)
 date: 2025-08-12
 categories:
-- [Environments]
+  - DevOps, SysAdmin
+tags:
+  - Reference
 ---
 
 Anyone who's used Visual Studio Code long enough has probably run into some surprisingly silly (and maddening) mistakes from its automatic language detection.

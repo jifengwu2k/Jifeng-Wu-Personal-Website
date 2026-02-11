@@ -1,6 +1,8 @@
 /.deploy_git/
+/.github/
 /db.json
 /node_modules/
 /package-lock.json
 /package.json
 /public/
+/themes/

@@ -14,6 +14,27 @@ date,name,amount
 2026-02-03,Collegetown Terr Rent,-1535.00
 2026-02-03,Payment to Chase card,-23.03
 2026-02-04,ONEPAY CASHREWRD SYF PAYMNT,-45.86
+2026-02-06,Payment to Chase card,-163.54
+2026-02-09,Payment to Chase card,-43.21
+2026-02-09,ONEPAY CASHREWRD SYF PAYMNT,-34.34
+2026-02-09,Payment to Chase card,-23.85
+2026-02-13,Cornell Universi DIR DEP PPD,1745.84
+2026-02-13,Payment to Chase card,-85.21
+2026-02-15,EBAY,-97.15
+2026-02-15,EBAY,-10.25
+2026-02-17,Payment to Chase card,-163.89
+2026-02-17,Payment to Chase card,-44.68
+2026-02-17,ONEPAY CASHREWRD SYF PAYMNT,-101.28
+2026-02-19,Zelle payment,27.00
+2026-02-20,OPENAI OPENAI.COM CA,-45.40
+2026-02-20,Payment to Chase card,-200.00
+2026-02-23,ONEPAY CASHREWRD SYF PAYMNT,-51.61
+2026-02-23,Payment to Chase card,-203.55
+2026-02-23,ONEPAY CASHREWRD SYF PAYMNT,-25.92
+2026-02-27,Payment to Chase card,-160.96
+2026-02-27,Payment to Chase card,-25.00
+2026-02-27,TRANSACT CAMPUS CORNELLU,-44.24
+2026-02-27,Cornell Universi DIR DEP PPD,1745.84
 ```
 
-Total: -1640.36
+Total: 354.24

@@ -2,7 +2,9 @@
 title: Powering `clangd`-based C++ IDEs with `compile_commands.json`
 date: 2025-08-11
 categories:
-- [Environments]
+  - DevOps, SysAdmin
+tags:
+  - Reference
 ---
 
 ## What is `compile_commands.json?`
