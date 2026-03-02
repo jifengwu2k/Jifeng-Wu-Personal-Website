@@ -39,6 +39,51 @@ print("Out-edges:", list(out_edges))  # Output: [(1, 2)]
 - `G.in_edges(node)` returns edges directed *into* `node`
 - `G.out_edges(node)` returns edges directed *out of* `node`
 
+## Visualizing Graphs with PyGraphviz and Graphviz
+
+NetworkX can interface directly with PyGraphviz and Graphviz, popular software packages for graph visualization.
+
+### Installing Graphviz and PyGraphviz
+
+Before you can use these visualization features, you need to install both PyGraphviz and Graphviz. On most systems, the easiest way is:
+
+```bash
+conda install -c conda-forge graphviz pygraphviz
+```
+
+### Rendering Graphs as Images
+
+Once you have everything installed, you can easily convert a NetworkX graph into a Graphviz object and save it directly as an image (`PNG`, `PDF`, etc.):
+
+```python
+import networkx as nx
+
+# Create or load a graph
+G = nx.DiGraph()
+G.add_edges_from([(1, 2), (2, 1), (2, 3), (3, 1)])
+
+# Convert to a pygraphviz AGraph
+A = nx.nx_agraph.to_agraph(G)
+
+# Write to DOT format (optional, for inspection/sharing)
+A.write("G.dot")
+
+# Render and save as a PNG image
+A.draw("G.png", prog="dot")
+```
+
+- `nx.nx_agraph.to_agraph(G)` converts your NetworkX graph to a PyGraphviz (Graphviz) AGraph object.
+- `.write("G.dot")` saves the graph in DOT format (plain text for Graphviz).
+- `.draw("G.png", prog="dot")` renders the image using the Graphviz "dot" layout engine.
+
+You can open `G.png` in any image viewer to see the visualization.
+
+> **Tip:** Try changing the `prog` argument to other Graphviz layout engines like `"neato"` or `"fdp"` for different layouts.
+
+### Further Customization
+
+You can customize node shapes, colors, and more using AGraph's methods or by passing attributes on creation; see [the pygraphviz documentation](https://pygraphviz.github.io/) for more details.
+
 ## Serializing and Deserializing Graphs
 
 When working with graphs, you may want to save (serialize) them to a file and load (deserialize) them later. There are two common approaches in NetworkX:
