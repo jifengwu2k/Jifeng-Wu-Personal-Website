@@ -58,7 +58,17 @@ What does this do?
 source ~/miniconda3/bin/activate
 ```
 
-You'll need to run this every time you log into your shell.
+By default, you'll need to run this every time you log into your shell. If you want to automatically execute this every time you log into your shell, run:
+
+```bash
+conda init --all
+```
+
+To cancel, run:
+
+```bash
+conda init --all --reverse
+```
 
 ## Managing Conda Environments
 
