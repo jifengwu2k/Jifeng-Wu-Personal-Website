@@ -2,7 +2,9 @@
 title: On Convolutional Neural Networks and Photographic Lenses
 date: 2023-08-24
 categories:
-- [Reflections]
+  - "Reflections"
+tags:
+  - "machine-learning"
 ---
 
 [Convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) are [camera lenses](https://en.wikipedia.org/wiki/Camera_lens) to a computer.

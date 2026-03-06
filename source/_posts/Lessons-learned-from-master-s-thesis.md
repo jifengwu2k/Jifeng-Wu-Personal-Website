@@ -2,7 +2,9 @@
 title: Lessons learned from Master's thesis
 date: 2024-08-23
 categories:
-- [Reflections]
+  - "Reflections"
+tags:
+  - "career"
 ---
 
 - Firmly define the research topic.

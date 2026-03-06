@@ -2,8 +2,10 @@
 layout: blog
 title: Eating in the Americas - Down-to-earth Foodstuffs
 date: 2025-08-21 
-categories: 
-- [Lifestyle]
+categories:
+  - "Lifestyle"
+tags:
+  - "food"
 ---
 
 吃在美洲——接地气儿的食材

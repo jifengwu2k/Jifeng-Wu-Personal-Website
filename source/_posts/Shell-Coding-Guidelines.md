@@ -2,7 +2,12 @@
 title: Shell Coding Guidelines
 date: 2025-09-28
 categories:
-- [Reference]
+  - "Programming"
+tags:
+  - "reference"
+  - "programming"
+  - "shell"
+  - "coding-guidelines"
 ---
 
 ## Removing Suffix by Separator

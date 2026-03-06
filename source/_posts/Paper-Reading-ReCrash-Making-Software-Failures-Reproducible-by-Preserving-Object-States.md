@@ -3,7 +3,9 @@ title: >-
   Paper Reading: ReCrash: Making Software Failures Reproducible by Preserving Object States
 date: 2022-10-25
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Advanced Software Engineering](https://github.com/ubccpsc/507/tree/2022sept). The original paper can be found [here](https://doi.org/10.1007/978-3-540-70592-5_23).

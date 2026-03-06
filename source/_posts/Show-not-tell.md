@@ -1,8 +1,10 @@
 ---
 title: Show, not tell
 date: 2024-06-20
-categories: 
-- [Reflections]
+categories:
+  - "Reflections"
+tags:
+  - "communication"
 ---
 
 # Original (Chinese)

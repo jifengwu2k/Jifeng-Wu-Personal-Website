@@ -2,7 +2,9 @@
 title: Our Motivation for Maintaining Our Blog
 date: 2023-08-16
 categories:
-- [Reflections]
+  - "Reflections"
+tags:
+  - "web"
 ---
 
 今之博客，乃昔（初高中）之错题本之翻版也。昔之背景知识、解题思路、高效算法，今之认识、洞见，皆为辛苦求索所得，故笔录之，以期日积月累，唯“应试”“科研”之直接目的异也。

@@ -2,9 +2,13 @@
 title: Building C/C++ Applications in a Conda Environment
 date: 2025-12-06
 categories:
-  - DevOps, SysAdmin
+  - "Systems"
 tags:
-  - Reference
+  - "reference"
+  - "systems"
+  - "c++"
+  - "conda"
+  - "build-systems"
 ---
 
 ## Prerequisites
@@ -161,21 +165,7 @@ Clone `llvm-project`:
 git clone https://github.com/llvm/llvm-project.git
 ```
 
-Build `llvm-project`:
-
-```bash
-mkdir -p llvm-project/build && cd llvm-project/build
-cmake -G Ninja ../llvm \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DLLVM_BUILD_EXAMPLES=ON \
-    -DLLVM_ENABLE_ASSERTIONS=ON \
-    -DLLVM_ENABLE_PROJECTS="mlir" \
-    -DLLVM_INSTALL_UTILS=ON \
-    -DLLVM_TARGETS_TO_BUILD="host" \
-    -DMLIR_ENABLE_BINDINGS_PYTHON=ON \
-    -DPython3_EXECUTABLE=$(which python) \
-    && ninja
-```
+Then see ["Using MLIR as a C++ Library with a Relocatable Install"](/2026/04/19/Using-MLIR-as-a-C++-Library-with-a-Relocatable-Install/)
 
 ### [ocaml+dune](https://dune.build/)
 

@@ -4,7 +4,9 @@ title: >-
   systems programs
 date: 2022-10-04
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Topics in Programming Languages: Automated Testing, Bug Detection, and Program Analysis](https://www.carolemieux.com/teaching/CPSC539L_2022w1.html). The original paper can be found [here](https://www.usenix.org/legacy/event/osdi08/tech/full_papers/cadar/cadar.pdf).

@@ -2,7 +2,10 @@
 title: Creating Custom Data Structures from Abstract Containers in `collections.abc`
 date: 2025-07-24
 categories:
-- ["Design Patterns"]
+  - "Programming"
+tags:
+  - "python"
+  - "data-structures"
 ---
 
 # Creating Custom Data Structures from Abstract Containers in `collections.abc`

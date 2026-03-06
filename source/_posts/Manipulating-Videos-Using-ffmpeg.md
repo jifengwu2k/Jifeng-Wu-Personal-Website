@@ -2,7 +2,9 @@
 title: Manipulating Videos Using `ffmpeg`
 date: 2025-08-23
 categories:
-- ["Data Science, Multimedia, and Process Automation"]
+  - "Tools and Automation"
+tags:
+  - "ffmpeg"
 ---
 
 ## Extract a Portion of the Video

@@ -2,9 +2,11 @@
 title: High-Frequency Git Operations for Everyday Development
 date: 2026-02-07
 categories:
-  - DevOps, SysAdmin
+  - "Systems"
 tags:
-  - Reference
+  - "reference"
+  - "systems"
+  - "git"
 ---
 
 Here are some of the most frequent Git operations you may need in day-to-day development.
@@ -493,8 +495,8 @@ git branch -D temp-recovery
 Create a "bare" Git repository (recommended for central repos):
 
 ```sh
-mkdir -p /abspath/to/myproject.git
-git init --bare /abspath/to/myproject.git
+mkdir -p ~/myproject.git
+git init --bare ~/myproject.git
 ```
 
 #### On Your Local Machine
@@ -505,9 +507,9 @@ git init path/to/myproject
 cd path/to/myproject
 git add .
 git commit -m "Initial commit"
-git branch -M main   # or master depending on your setup
-git remote add origin ssh://username@your.server.com/abspath/to/myproject.git
-git push -u origin main
+git branch -M main  # or master depending on your setup
+git remote add origin ssh://username@your.server.com/~/myproject.git
+git push -u origin main  # or master depending on your setup
 ```
 
 #### Clone from the SSH server elsewhere
@@ -515,7 +517,7 @@ git push -u origin main
 To clone onto another machine:
 
 ```sh
-git clone ssh://username@your.server.com/abspath/to/myproject.git
+git clone ssh://username@your.server.com/~/myproject.git
 ```
 
 ### Duplicate a Repository on GitHub Without Forking

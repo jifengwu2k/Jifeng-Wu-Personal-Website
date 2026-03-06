@@ -3,7 +3,9 @@ layout: blog
 title: 'Paper Reading: Software tools to facilitate research programming'
 date: 2022-10-18
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 This is a paper recommended to me [by Margo Seltzer during a conversation](/2023/10/10/Conversation-with-Prof-Margo-Seltzer/). The original paper can be found [here](http://users.csc.calpoly.edu/~dekhtyar/401-Fall2016/papers/guo_phd_dissertation.pdf).

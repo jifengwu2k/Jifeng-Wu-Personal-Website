@@ -3,7 +3,11 @@ layout: blog
 title: Sarah Chasins' Works on PL and HCI
 date: 2023-11-05
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "researcher-profile"
+  - "programming-languages"
+  - "hci"
 ---
 
 # [Co-Designing for Transparency: Lessons from Building a Document Organization Tool in the Criminal Justice Domain](https://dl.acm.org/doi/10.1145/3593013.3594093)

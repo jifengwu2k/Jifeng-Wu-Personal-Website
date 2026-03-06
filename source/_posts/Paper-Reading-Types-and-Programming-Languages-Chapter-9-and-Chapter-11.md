@@ -3,7 +3,9 @@ title: >-
   Paper Reading: "Types and Programming Languages" Chapter 9 and Chapter 11
 date: 2023-01-25
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 # Summary

@@ -2,7 +2,9 @@
 title: 'Paper Reading: The Art of Testing Less without Sacrificing Quality'
 date: 2022-09-21
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Advanced Software Engineering](https://github.com/ubccpsc/507/tree/2022sept). The original paper can be found [here](https://www.microsoft.com/en-us/research/publication/the-art-of-testing-less-without-sacrificing-quality/).

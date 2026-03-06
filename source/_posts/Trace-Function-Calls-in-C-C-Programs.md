@@ -4,9 +4,12 @@ excerpt: Trace Function Calls in C/C++ Programs
 date: 2026-02-28
 updated: 2026-02-28
 categories:
-  - Theory, Data Structures, Algorithms, Programming Languages, Design Patterns
+  - "Systems"
 tags:
-- Reference
+  - "reference"
+  - "systems"
+  - "c++"
+  - "debugging"
 ---
 
 Sometimes, it's helpful to trace function calls in your program. Fortunately, GCC and Clang provide a built-in feature for this: **function instrumentation** via the `-finstrument-functions` flag. Here's a hands-on tutorial.

@@ -2,9 +2,10 @@
 title: Manipulating PDFs from the Unix Command Line
 date: 2025-08-27
 categories:
-- Data Science, Machine Learning, Multimedia Processing
+  - "Tools and Automation"
 tags:
-- Reference
+  - "reference"
+  - "pdf"
 ---
 
 ## Poppler Utilities

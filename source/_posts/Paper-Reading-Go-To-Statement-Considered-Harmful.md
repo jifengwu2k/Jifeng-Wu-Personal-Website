@@ -2,7 +2,9 @@
 title: 'Paper Reading: Go To Statement Considered Harmful'
 date: 2022-10-04
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Advanced Software Engineering](https://github.com/ubccpsc/507/tree/2022sept). The original paper can be found [here](https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf).
