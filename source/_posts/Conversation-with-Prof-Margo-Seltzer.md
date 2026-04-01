@@ -2,7 +2,10 @@
 title: Conversation with Prof. Margo Seltzer
 date: 2023-10-10
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "conversation"
+  - "systems"
 ---
 
 # Introduction to Prof. Margo Seltzer (quoted from Wikipedia)

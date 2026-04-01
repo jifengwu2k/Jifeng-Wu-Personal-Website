@@ -2,9 +2,10 @@
 title: "2025-09 Financial Statement"
 date: 2025-09-30
 categories:
-  - Lifestyle
+  - "Lifestyle"
 tags:
-  - Records
+  - "records"
+  - "finance"
 excerpt: 2025-09 Financial Statement
 ---
 

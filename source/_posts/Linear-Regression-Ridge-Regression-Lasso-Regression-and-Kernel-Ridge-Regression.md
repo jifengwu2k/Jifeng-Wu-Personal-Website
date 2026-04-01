@@ -5,8 +5,10 @@ title: >-
   Regression
 date: 2023-12-24
 math: true
-categories: 
-- [Mathematics]
+categories:
+  - "Mathematics"
+tags:
+  - "machine-learning"
 ---
 
 # Linear Regression

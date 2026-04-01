@@ -2,7 +2,10 @@
 title: 'Qt, OpenCV, PyTorch: The Central Dogma of GUI CV Applications'
 date: 2026-01-11
 categories:
-- ["Data Science, Multimedia, and Process Automation"]
+  - "AI and Machine Learning"
+tags:
+  - "machine-learning"
+  - "computer-vision"
 ---
 
 Just as the central dogma in molecular biology describes genetic information flow from DNA to RNA to protein, we can use a similar terminology to describe how pixels flow from GUI to classic CV algorithms to deep learning-based CV models in GUI CV applications.

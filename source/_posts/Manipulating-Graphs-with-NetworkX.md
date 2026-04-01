@@ -3,9 +3,12 @@ title: Manipulating Graphs with NetworkX
 date: 2026-01-31
 updated: 2026-01-31
 categories:
-  - Theory, Data Structures, Algorithms, Programming Languages, Design Patterns
+  - "Programming"
 tags:
-  - Reference
+  - "reference"
+  - "python"
+  - "networkx"
+  - "data-structures"
 ---
 
 NetworkX is a powerful pure-Python library for creating, manipulating, and analyzing graphs. This guide covers essential tasks using NetworkX.

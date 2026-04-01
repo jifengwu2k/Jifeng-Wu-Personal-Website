@@ -3,7 +3,10 @@ layout: blog
 title: 'Metaclass Fundamentals'
 date: 2025-07-25
 categories:
-- ["Design Patterns"]
+  - "Programming"
+tags:
+  - "python"
+  - "metaprogramming"
 ---
 
 Metaclasses are one of Python's most powerful yet least understood features. They enable patterns that would be difficult or impossible with regular class definitions. In this post, we'll explore metaclass fundamentals through simple examples.

@@ -2,7 +2,9 @@
 title: Manipulating `DataFrame`s Using `pandas`
 date: 2025-08-12
 categories:
-- ["Data Science, Multimedia, and Process Automation"]
+  - "Tools and Automation"
+tags:
+  - "pandas"
 ---
 
 ## One `DataFrame` has the columns `A`, `B` and another has the columns `A`, `C`. How to merge into one `DataFrame` with columns `A`, `B`, and `C`?

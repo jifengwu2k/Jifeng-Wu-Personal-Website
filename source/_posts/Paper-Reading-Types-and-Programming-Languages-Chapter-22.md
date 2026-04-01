@@ -3,7 +3,9 @@ title: >-
   Paper Reading: "Types and Programming Languages" Chapter 22
 date: 2023-02-26
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 # Summary

@@ -5,7 +5,10 @@ title: >-
   Observations and Gained Insights
 date: 2023-09-08
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "workshop-notes"
+  - "programming-languages"
 ---
 
 ![Group Photo](/static/images/The-Cornell-Maryland-Max-Planck-Pre-doctoral-Research-School-2023.jpeg)

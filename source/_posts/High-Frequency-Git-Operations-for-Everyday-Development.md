@@ -2,9 +2,11 @@
 title: High-Frequency Git Operations for Everyday Development
 date: 2026-02-07
 categories:
-  - DevOps, SysAdmin
+  - "Systems"
 tags:
-  - Reference
+  - "reference"
+  - "systems"
+  - "git"
 ---
 
 Here are some of the most frequent Git operations you may need in day-to-day development.

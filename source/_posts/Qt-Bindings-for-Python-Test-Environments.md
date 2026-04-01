@@ -2,7 +2,11 @@
 title: Qt Bindings for Python Test Environments
 date: 2026-01-18
 categories:
-- [Environments]
+  - "Systems"
+tags:
+  - "systems"
+  - "python"
+  - "qt"
 ---
 
 When testing Python code using PyQt compatibility packages such as [detect-qt-binding](https://github.com/jifengwu2k/detect-qt-binding), we would need to test the code with different Qt bindings for Python. Here I summarize what environment is required to run those bindings.

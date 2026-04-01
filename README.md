@@ -72,6 +72,129 @@ From within your project directory (`Blog`):
   hexo deploy
   ```
 
+## Content Taxonomy
+
+Posts under `source/_posts` use a controlled taxonomy.
+
+### Rules
+
+- Each post should have **exactly one** category.
+- Categories use **Title Case**.
+- Tags use **lowercase kebab-case**.
+- Prefer an existing tag over inventing a near-duplicate.
+- Use **categories** for broad site sections and **tags** for format, subject, tool, or platform.
+- `Reference` is a **tag**, not a category.
+
+### Categories
+
+- `Programming` — programming concepts, languages, APIs, data structures, and coding practice.
+- `Systems` — operating systems, developer environments, infrastructure, deployment, and system tooling.
+- `AI and Machine Learning` — AI, ML, LLM, CV, and closely related topics.
+- `Tools and Automation` — practical workflows for automation, data handling, media processing, and scripting-oriented tooling.
+- `Mathematics` — mathematical explanations, derivations, and formula-focused posts.
+- `Research Notes` — paper readings, conversations, workshop/conference observations, talk recaps, defense summaries, and research-oriented notes.
+- `Reflections` — personal reflections, philosophy, lessons learned, and opinion pieces.
+- `Lifestyle` — personal records and practical posts on food, fitness, finance, clothing, and related topics.
+- `Linguistics and Literature` — language, phonetics, translation, idioms, poetry, quotes, and literary notes.
+
+### Tags
+
+#### Format and intent
+
+- `reference`
+- `records`
+- `essay`
+- `paper-reading`
+- `conversation`
+- `conference-notes`
+- `workshop-notes`
+- `talk-notes`
+- `defense-summary`
+- `researcher-profile`
+- `coding-guidelines`
+
+#### Subject and theme
+
+- `systems`
+- `software-engineering`
+- `programming-languages`
+- `computer-science`
+- `machine-learning`
+- `llm`
+- `computer-architecture`
+- `computer-vision`
+- `data-structures`
+- `information-theory`
+- `type-theory`
+- `metaprogramming`
+- `functional-programming`
+- `communication`
+- `career`
+- `finance`
+- `fitness`
+- `food`
+- `nutrition`
+- `fashion`
+- `linguistics`
+- `literature`
+- `phonetics`
+- `poetry`
+- `translation`
+- `quotes`
+- `medical-imaging`
+- `web`
+- `remote-desktop`
+- `web-scraping`
+- `visualization`
+- `hci`
+- `debugging`
+- `date-time`
+- `build-systems`
+- `conferences`
+- `fourier-analysis`
+
+#### Languages, tools, and platforms
+
+- `c++`
+- `python`
+- `shell`
+- `yaml`
+- `ocaml`
+- `conda`
+- `dune`
+- `git`
+- `github-actions`
+- `clangd`
+- `qt`
+- `jupyter`
+- `pandas`
+- `ffmpeg`
+- `networkx`
+- `ollama`
+- `ssh`
+- `vnc`
+- `vscode`
+- `theia`
+- `linux`
+- `windows`
+- `wine`
+- `pdf`
+
+### Example front matter
+
+```yaml
+---
+title: Example Post
+date: 2026-01-01
+categories:
+  - "Systems"
+tags:
+  - "reference"
+  - "linux"
+  - "ssh"
+---
+```
+
 ## ⚠️ Important: Delete Old Deployments and Workflow Runs
 
 > **Why delete old GitHub Pages deployments and workflow runs?**

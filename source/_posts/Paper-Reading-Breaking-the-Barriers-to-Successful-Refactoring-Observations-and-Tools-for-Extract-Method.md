@@ -4,7 +4,9 @@ title: >-
   and Tools for Extract Method
 date: 2022-10-13
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Advanced Software Engineering](https://github.com/ubccpsc/507/tree/2022sept). The original paper can be found [here](https://doi.org/10.1145/1368088.1368146).

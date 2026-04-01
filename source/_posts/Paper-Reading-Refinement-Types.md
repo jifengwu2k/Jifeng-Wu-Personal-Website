@@ -2,7 +2,9 @@
 title: 'Paper Reading: Refinement Types'
 date: 2023-03-19
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Topics in Programming Languages: Type Systems](https://williamjbowman.com/teaching/2022/w2/cpsc539b/). The original paper can be found [here](https://arxiv.org/abs/2010.07763).

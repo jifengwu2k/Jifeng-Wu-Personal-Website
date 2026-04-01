@@ -1,8 +1,10 @@
 ---
 title: 'Paper Reading: Registerless Hardware Description'
 date: 2025-10-09
-categories: 
-- ["Research Inspiration"]
+categories:
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 ## Problem Addressed / Motivation

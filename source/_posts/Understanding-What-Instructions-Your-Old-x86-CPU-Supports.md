@@ -2,7 +2,10 @@
 title: Understanding What Instructions Your Old x86 CPU Supports
 date: 2025-11-29
 categories:
-- [Environments]
+  - "Systems"
+tags:
+  - "systems"
+  - "computer-architecture"
 ---
 
 If you're experimenting with running software on an old x86 CPU, it helps to know precisely which instructions are available. This blog post walks through inspecting CPU instructions with a C utility, explains their significance, and clarifies which compiler flags to use so your software runs reliably.

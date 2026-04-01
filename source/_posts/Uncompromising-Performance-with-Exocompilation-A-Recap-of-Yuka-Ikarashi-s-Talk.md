@@ -3,9 +3,10 @@ title: "Uncompromising Performance with Exocompilation: A Recap of Yuka Ikarashi
 date: 2026-01-28
 updated: 2026-01-28
 categories:
-  - "Computer Architecture, Operating Systems, Computer Networks, Distributed Systems"
+  - "Research Notes"
 tags:
-  - Talks
+  - "talk-notes"
+  - "computer-architecture"
 excerpt: "In a recent talk, Yuka Ikarashi, creator of the Exo programming language, introduced Exocompilation, a philosophy and toolkit that rethinks how we optimize for cutting-edge hardware. Unlike traditional compilers, Exo doesn't hard-bake hardware backends and optimizations, but instead, treats them as extensible, safe user libraries."
 ---
 

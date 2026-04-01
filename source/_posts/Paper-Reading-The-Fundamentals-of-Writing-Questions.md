@@ -2,7 +2,9 @@
 title: 'Paper Reading: The Fundamentals of Writing Questions'
 date: 2022-10-26
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Advanced Software Engineering](https://github.com/ubccpsc/507/tree/2022sept). The original paper can be found [here](https://www.wiley.com/en-us/Internet,+Phone,+Mail,+and+Mixed+Mode+Surveys:+The+Tailored+Design+Method,+4th+Edition-p-9781118456149).

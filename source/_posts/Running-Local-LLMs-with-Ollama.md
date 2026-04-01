@@ -2,7 +2,11 @@
 title: Running Local LLMs with Ollama
 date: 2025-09-05
 categories:
-- ["Data Science, Multimedia, and Process Automation"]
+  - "AI and Machine Learning"
+tags:
+  - "machine-learning"
+  - "llm"
+  - "ollama"
 ---
 
 Large Language Models (LLMs) have revolutionized AI, but cloud-based solutions often come with privacy concerns and usage limitations. Ollama provides an elegant solution by enabling you to run LLMs locally on your machine. This guide will walk you through the entire process from installation to interaction.

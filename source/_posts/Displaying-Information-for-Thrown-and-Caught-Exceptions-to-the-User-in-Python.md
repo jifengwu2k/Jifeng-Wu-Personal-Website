@@ -2,7 +2,10 @@
 title: Displaying Information for Thrown and Caught Exceptions to the User in Python
 date: 2023-02-20
 categories:
-- ["Design Patterns"]
+  - "Programming"
+tags:
+  - "python"
+  - "debugging"
 ---
 
 ## Exception Semantics in Python

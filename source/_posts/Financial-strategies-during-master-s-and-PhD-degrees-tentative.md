@@ -1,8 +1,11 @@
 ---
 title: Financial strategies during master's and PhD degrees (tentative)
 date: 2024-06-16
-categories: 
-- [Reflections]
+categories:
+  - "Reflections"
+tags:
+  - "career"
+  - "finance"
 ---
 
 # Original (Chinese)

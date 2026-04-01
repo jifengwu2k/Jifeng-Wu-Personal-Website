@@ -2,7 +2,9 @@
 title: 'Paper Reading: Bi-directional type checking'
 date: 2023-01-30
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Topics in Programming Languages: Type Systems](https://williamjbowman.com/teaching/2022/w2/cpsc539b/). The original paper can be found [here](http://www.davidchristiansen.dk/tutorials/bidirectional.pdf).

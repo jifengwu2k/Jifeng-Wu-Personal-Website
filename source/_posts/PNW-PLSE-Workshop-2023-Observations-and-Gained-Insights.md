@@ -2,7 +2,10 @@
 title: PNW PLSE Workshop 2023 Observations and Gained Insights
 date: 2023-05-09
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "workshop-notes"
+  - "programming-languages"
 ---
 
 # [10:30 - Talks](https://sites.google.com/cs.washington.edu/pnwplseworkshop/pnw-plse-2023#h.5ebiaujbjmrk)

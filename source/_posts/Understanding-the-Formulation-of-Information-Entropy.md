@@ -1,8 +1,10 @@
 ---
 title: Understanding the Formulation of Information Entropy
 date: 2022-09-16
-categories: 
-- [Mathematics]
+categories:
+  - "Mathematics"
+tags:
+  - "information-theory"
 ---
 
 NOTE: The terms "language" and "word" are used metaphorically in this document.

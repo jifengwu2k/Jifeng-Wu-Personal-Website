@@ -2,7 +2,9 @@
 title: 'Paper Reading: How to make ad-hoc polymorphism less ad-hoc'
 date: 2023-03-06
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Topics in Programming Languages: Type Systems](https://williamjbowman.com/teaching/2022/w2/cpsc539b/). The original paper can be found [here](https://doi.org/10.1145/75277.75283).

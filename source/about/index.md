@@ -1,5 +1,5 @@
 ---
-title: Home
+title: About
 date: 2025-05-20
 ---
 

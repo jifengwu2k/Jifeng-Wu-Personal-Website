@@ -3,9 +3,11 @@ layout: blog
 title: 'Python in a Functional Style: Closures, Generators, and Coroutines'
 date: 2022-10-28
 categories:
-  - Theory, Data Structures, Algorithms, Programming Languages, Design Patterns
+  - "Programming"
 tags:
-  - Essays
+  - "essay"
+  - "python"
+  - "functional-programming"
 ------
 
 <!-- header: Contents -->

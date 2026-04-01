@@ -2,9 +2,11 @@
 title: "PRoot: Lightweight Userland Linux Distros Without Root"
 date: 2026-02-11
 categories:
-  - DevOps, SysAdmin
+  - "Systems"
 tags:
-  - Reference
+  - "reference"
+  - "systems"
+  - "linux"
 ---
 
 Need to build and run applications in a different Linux distribution than your host, but can't use root, Docker or Podman containers, or virtualization on your system (e.g. on shared HPC, constrained cloud VMs)?

@@ -2,7 +2,10 @@
 title: Timetable of Well-known Conferences in Different Subdomains of Computer Science
 date: 2023-08-16
 categories:
-- [Reference]
+  - "Research Notes"
+tags:
+  - "reference"
+  - "conferences"
 ---
 
 We have compiled a timetable of well-known conferences in different subdomains of computer science based on the *Class A* and *Class B* conferences in ["Directory of International Academic Conferences and Journals Recommended by the Chinese Computer Society"](https://www.ccf.org.cn/Academic_Evaluation/By_category/). Although the precise start dates of each conference vary year by year, the provided start dates provide a general guideline on the *relative order* of the conferences throughout each year.

@@ -1,8 +1,10 @@
 ---
 title: Our minds are, indeed, the minds of engineers
 date: 2024-06-19
-categories: 
-- [Reflections]
+categories:
+  - "Reflections"
+tags:
+  - "software-engineering"
 ---
 
 # Original (Chinese)

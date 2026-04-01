@@ -3,7 +3,9 @@ title: >-
   My Software Engineering Philosophy
 date: 2023-09-24
 categories:
-- [Reflections]
+  - "Reflections"
+tags:
+  - "software-engineering"
 ---
 
 > If you deprive yourself of outsourcing and your competitors do not, you're putting yourself out of business.

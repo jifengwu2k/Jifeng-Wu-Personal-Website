@@ -2,7 +2,10 @@
 title: Pre-MICCAI Workshop@UBC Observations and Gained Insights
 date: 2023-10-08
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "workshop-notes"
+  - "medical-imaging"
 ---
 
 From the [Pre-MICCAI Workshop@UBC](https://sites.google.com/view/pre-miccai-ubc/home) website:

@@ -4,7 +4,9 @@ title: >-
   Visualization Code
 date: 2026-01-19
 categories:
-- ["Data Science, Multimedia, and Process Automation"]
+  - "Tools and Automation"
+tags:
+  - "visualization"
 ---
 
 ## Structural Diagrams

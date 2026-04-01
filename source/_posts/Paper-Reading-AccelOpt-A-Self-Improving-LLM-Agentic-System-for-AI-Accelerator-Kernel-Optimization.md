@@ -2,9 +2,9 @@
 title: "Paper Reading: AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization"
 date: 2025-12-11
 categories:
-  - "Computer Architecture, Operating Systems, Computer Networks, Distributed Systems"
+  - "Research Notes"
 tags:
-  - Paper Readings
+  - "paper-reading"
 ---
 
 ## Summary

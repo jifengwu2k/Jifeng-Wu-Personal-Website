@@ -2,7 +2,9 @@
 title: 'Paper Reading: Qualitative Methods in Empirical Studies of Software Engineering'
 date: 2022-09-14
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Advanced Software Engineering](https://github.com/ubccpsc/507/tree/2022sept). The original paper can be found [here](https://doi.org/10.1109/32.799955).

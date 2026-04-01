@@ -2,7 +2,9 @@
 title: 'Strategies, Tactics, and Mindset Learned from "The Ph.D. Grind"'
 date: 2023-12-31
 categories:
-- [Reference]
+  - "Reflections"
+tags:
+  - "career"
 ---
 
 Note: This is a Paper Reading for Philip Guo's famous book "The Ph.D. Grind: A Ph.D. Student Memoir."

@@ -2,7 +2,10 @@
 title: ISSTA/ECOOP 2023 Observations and Gained Insights
 date: 2023-07-21
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "conference-notes"
+  - "software-engineering"
 ---
 
 # Mon 17 Jul

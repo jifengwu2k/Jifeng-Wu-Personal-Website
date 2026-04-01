@@ -2,7 +2,10 @@
 title: Conversation with Prof. Robert Xiao
 date: 2023-10-23
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "conversation"
+  - "programming-languages"
 ---
 
 # Abstract

@@ -2,7 +2,9 @@
 title: 'Paper Reading: Asynchronous Functional Reactive Programming for GUIs (The Elm Paper)'
 date: 2024-01-24
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for the PL Reading Group. The original paper can be found [here](https://people.seas.harvard.edu/~chong/pubs/pldi13-elm.pdf).

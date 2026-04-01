@@ -2,8 +2,10 @@
 title: >-
   Pay attention to the other person's easily overlooked emotional state when chatting online
 date: 2024-07-02
-categories: 
-- [Reflections]
+categories:
+  - "Reflections"
+tags:
+  - "communication"
 ---
 
 # Original (Chinese)

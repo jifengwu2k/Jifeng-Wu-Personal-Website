@@ -1,8 +1,10 @@
 ---
 title: On doing things with others
 date: 2024-05-30
-categories: 
-- [Reflections]
+categories:
+  - "Reflections"
+tags:
+  - "communication"
 ---
 
 # Original (Chinese)

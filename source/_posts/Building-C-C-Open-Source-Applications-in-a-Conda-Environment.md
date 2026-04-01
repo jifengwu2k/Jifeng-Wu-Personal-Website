@@ -2,9 +2,13 @@
 title: Building C/C++ Applications in a Conda Environment
 date: 2025-12-06
 categories:
-  - DevOps, SysAdmin
+  - "Systems"
 tags:
-  - Reference
+  - "reference"
+  - "systems"
+  - "c++"
+  - "conda"
+  - "build-systems"
 ---
 
 ## Prerequisites

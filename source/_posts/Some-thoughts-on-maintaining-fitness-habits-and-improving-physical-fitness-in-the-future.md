@@ -1,8 +1,10 @@
 ---
 title: Some thoughts on maintaining fitness habits and improving physical fitness in the future
 date: 2024-02-29
-categories: 
-- [Reflections]
+categories:
+  - "Reflections"
+tags:
+  - "fitness"
 ---
 
 # Original (Chinese)

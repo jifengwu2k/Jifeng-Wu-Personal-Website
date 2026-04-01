@@ -2,7 +2,10 @@
 title: Date and Time Types in Python
 date: 2022-12-31
 categories:
-- ["Design Patterns"]
+  - "Programming"
+tags:
+  - "python"
+  - "date-time"
 ---
 
 There are many types in Python which can store date and time information. These types can be broadly divided into two categories:

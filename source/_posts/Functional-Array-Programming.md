@@ -2,7 +2,9 @@
 title: Functional Array Programming
 date: 2024-01-04
 categories:
-- ["Design Patterns"]
+  - "Programming"
+tags:
+  - "functional-programming"
 ---
 
 # Functional Programming in R (focus on *usability*, contains detailed description of *removing for loops*)

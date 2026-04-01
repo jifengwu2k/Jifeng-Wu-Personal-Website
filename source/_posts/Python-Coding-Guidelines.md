@@ -2,9 +2,11 @@
 title: Python Coding Guidelines
 date: 2025-08-29
 categories:
-  - Theory, Data Structures, Algorithms, Programming Languages, Design Patterns
+  - "Programming"
 tags:
-  - Reference
+  - "reference"
+  - "python"
+  - "coding-guidelines"
 ---
 
 > Philosophy:

@@ -2,7 +2,12 @@
 title: Building an OCaml Project with Dependencies in a Conda Environment Using Dune
 date: 2026-01-17
 categories:
-- [Environments]
+  - "Systems"
+tags:
+  - "systems"
+  - "ocaml"
+  - "dune"
+  - "conda"
 ---
 
 This workflow shows how to create and build an OCaml project with dependencies inside a Conda environment using Dune.

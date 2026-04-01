@@ -2,9 +2,11 @@
 title: Installing Fonts on Linux
 date: 2026-02-15
 categories:
-- Data Science, Machine Learning, Multimedia Processing
+  - "Systems"
 tags:
-- Reference
+  - "reference"
+  - "systems"
+  - "linux"
 ---
 
 First, download your desired font. Fonts are usually TTF (`.ttf`), OTF (`.otf`). For illustration, let's say you downloaded `MyFont.ttf`.

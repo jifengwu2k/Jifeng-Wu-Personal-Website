@@ -3,8 +3,10 @@ title: >-
   Understanding the Name, Structure, and Loss Function of the Variational
   Autoencoder
 date: 2023-09-30
-categories: 
-- [Mathematics]
+categories:
+  - "AI and Machine Learning"
+tags:
+  - "machine-learning"
 ---
 
 Despite the intuitive appeal of [variational autoencoders (VAEs)](https://en.wikipedia.org/wiki/Variational_autoencoder), their underlying principles can be elusive. After extensive research across papers and online resources, I will summarize the core insights behind the VAE's name, structure, and loss function and try to explain **how the mathematical formulas used to describe the VAE came into being from first principles**, as opposed to simply providing interpretations for them.

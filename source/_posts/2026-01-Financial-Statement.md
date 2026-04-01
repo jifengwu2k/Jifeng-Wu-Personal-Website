@@ -2,9 +2,10 @@
 title: 2026-01 Financial Statement
 date: 2026-01-31
 categories:
-  - Lifestyle
+  - "Lifestyle"
 tags:
-  - Records
+  - "records"
+  - "finance"
 excerpt: 2026-01 Financial Statement
 ---
 

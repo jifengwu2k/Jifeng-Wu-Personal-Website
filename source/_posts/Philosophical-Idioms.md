@@ -2,7 +2,9 @@
 title: Philosophical Idioms
 date: 2025-08-27
 categories:
-- ["Linguistics and Literature"]
+  - "Linguistics and Literature"
+tags:
+  - "literature"
 ---
 
 ## Cutting Through the Nonsense

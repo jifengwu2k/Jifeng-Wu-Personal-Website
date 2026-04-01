@@ -2,7 +2,9 @@
 title: 'Paper Reading: Software''s Chronic Crisis'
 date: 2022-09-12
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Advanced Software Engineering](https://github.com/ubccpsc/507/tree/2022sept). The original paper can be found [here](https://www.cse.psu.edu/~gxt29/bug/localCopies/SoftwareCrisis.html).

@@ -2,7 +2,9 @@
 title: Using DevTools Console for Web Scraping
 date: 2025-08-12
 categories:
-- ["Data Science, Multimedia, and Process Automation"]
+  - "Tools and Automation"
+tags:
+  - "web-scraping"
 ---
 
 ## Convert an HTML Table to a Pandas-compatible JSON

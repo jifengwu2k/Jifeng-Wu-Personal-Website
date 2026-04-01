@@ -2,7 +2,9 @@
 title: 'Paper Reading: Boosting Fuzzer Eficiency: An Information Theoretic Perspective'
 date: 2022-09-20
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Topics in Programming Languages: Automated Testing, Bug Detection, and Program Analysis](https://www.carolemieux.com/teaching/CPSC539L_2022w1.html). The original paper can be found [here](https://doi.org/10.6084/m9.figshare.12415622.v2).

@@ -4,9 +4,10 @@ excerpt: 2026-01 Daily Macronutrient Intake
 date: 2026-01-31
 updated: 2026-01-31
 categories:
-  - Lifestyle
+  - "Lifestyle"
 tags:
-  - Records
+  - "records"
+  - "nutrition"
 ---
 
 ```

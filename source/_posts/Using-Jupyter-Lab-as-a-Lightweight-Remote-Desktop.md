@@ -2,9 +2,12 @@
 title: Using Jupyter Lab as a Lightweight Remote Desktop
 date: 2025-10-04
 categories:
-  - DevOps, SysAdmin
+  - "Systems"
 tags:
-  - Reference
+  - "reference"
+  - "systems"
+  - "jupyter"
+  - "remote-desktop"
 ---
 
 # Using Jupyter Lab as a Lightweight Remote Desktop

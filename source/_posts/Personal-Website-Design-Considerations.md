@@ -2,7 +2,10 @@
 title: Personal Website Design Considerations
 date: 2022-10-20
 categories:
-- [Reference]
+  - "Programming"
+tags:
+  - "reference"
+  - "web"
 ---
 
 # Hosting

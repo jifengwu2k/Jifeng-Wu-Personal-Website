@@ -3,9 +3,10 @@ title: " From the Fourier Series to the Fourier Transform to the Discrete Fourie
 date: 2023-09-04
 updated: 2026-02-14
 categories:
-  - Theory, Data Structures, Algorithms, Programming Languages, Design Patterns
+  - "Mathematics"
 tags:
-  - Essays
+  - "essay"
+  - "fourier-analysis"
 ---
 
 In realms as broad as electrical engineering, acoustics, optics, signal processing, quantum mechanics, and econometrics, the Fourier Series, Fourier Transform, and Discrete Fourier Transform play a pivotal role in analyzing signals by allowing us to decompose them into simpler components. Many articles present their formulas or dive into their intuition and applications. However, what seems to be missing is a blog post that explains the derivation of their formulas in a way that is both clear and accessible, requiring no more than a rudimentary understanding of calculus.

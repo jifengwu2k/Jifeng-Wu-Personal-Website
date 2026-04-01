@@ -2,9 +2,11 @@
 title: Running Theia (VSCode-like IDE) in the Cloud & Sharing it Securely
 date: 2026-03-06
 categories:
-  - DevOps, SysAdmin
+  - "Systems"
 tags:
-  - Reference
+  - "reference"
+  - "systems"
+  - "theia"
 ---
 
 Do you want a VSCode-like IDE running in your Linux cloud server accessible from anywhere? In this post, I'll walk you through:

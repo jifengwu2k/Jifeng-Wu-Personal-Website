@@ -1,8 +1,10 @@
 ---
 title: Talking back and confidence
 date: 2024-07-07
-categories: 
-- [Reflections]
+categories:
+  - "Reflections"
+tags:
+  - "communication"
 ---
 
 # Original (Chinese)

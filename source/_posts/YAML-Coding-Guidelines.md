@@ -2,7 +2,11 @@
 title: YAML Coding Guidelines
 date: 2026-01-20
 categories:
-- [Reference]
+  - "Programming"
+tags:
+  - "reference"
+  - "yaml"
+  - "coding-guidelines"
 ---
 
 ### Rationale

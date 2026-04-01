@@ -2,7 +2,9 @@
 title: 'Paper Reading: CUTE: A Concolic Unit Testing Engine for C'
 date: 2022-10-02
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "paper-reading"
 ---
 
 NOTE: This is a Paper Reading for [Topics in Programming Languages: Automated Testing, Bug Detection, and Program Analysis](https://www.carolemieux.com/teaching/CPSC539L_2022w1.html). The original paper can be found [here](https://doi.org/10.1145/1095430.1081750).

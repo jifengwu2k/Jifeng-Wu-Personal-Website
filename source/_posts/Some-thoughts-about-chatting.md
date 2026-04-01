@@ -1,8 +1,10 @@
 ---
 title: Some thoughts about chatting
 date: 2024-07-05
-categories: 
-- [Reflections]
+categories:
+  - "Reflections"
+tags:
+  - "communication"
 ---
 
 # Original (Chinese)

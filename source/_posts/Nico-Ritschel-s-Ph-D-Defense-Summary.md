@@ -2,7 +2,10 @@
 title: Nico Ritschel's Ph.D. Defense Summary
 date: 2023-10-13
 categories:
-- ["Research Inspiration"]
+  - "Research Notes"
+tags:
+  - "defense-summary"
+  - "programming-languages"
 ---
 
 [Nico Ritschel](https://www.cs.ubc.ca/~ritschel/)'s research focuses on refining block-based programming by integrating elements from visual programming to make it more accessible and effective for end-users, especially in the robotics domain.
