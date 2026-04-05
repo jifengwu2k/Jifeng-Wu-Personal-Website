@@ -347,10 +347,10 @@ navbar:
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
-    - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
-    #- { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
+    # - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
+    - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
@@ -744,23 +744,11 @@ post:
 # Based on GitHub Issues
 # See: https://utteranc.es
 utterances:
-  repo: abbaswu/utterances
+  repo: jifengwu2k/utterances
   issue_term: pathname
   label: utterances
   theme: github-light
   theme_dark: github-dark
-
-# Disqus
-# 基于第三方的服务，国内用户直接使用容易被墙，建议配合 Disqusjs
-# Based on third-party service
-# See: https://disqus.com
-disqus:
-  shortname: gulistan-i-abbasi
-  # 以下为 Disqusjs 支持, 国内用户如果想使用 Disqus 建议配合使用
-  # The following are Disqusjs configurations, please ignore if DisqusJS is not required
-  # See: https://github.com/SukkaW/DisqusJS
-  disqusjs: false
-  apikey:
 
 # Gitalk
 # 基于 GitHub Issues
@@ -947,15 +935,18 @@ about:
   banner_img_height: 60
   banner_mask_alpha: 0.3
   avatar: /img/avatar.png
-  name: "Fluid"
-  intro: "An elegant theme for Hexo"
+  name: "Jifeng Wu"
+  intro: "ECE researcher"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
-    - { class: "iconfont icon-github-fill", link: "https://github.com", tip: "GitHub" }
-    - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
-    - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
-
+    - { class: "iconfont icon-mail", link: "mailto:jifengwu2k@gmail.com", tip: "Email" }
+    - { class: "iconfont icon-facebook-fill", link: "https://www.facebook.com/profile.php?id=100087278086868", tip: "Facebook" }
+    - { class: "iconfont icon-github-fill", link: "https://github.com/jifengwu2k", tip: "GitHub" }
+    - { class: "iconfont icon-instagram-fill", link: "https://www.instagram.com/jifengwu2k/", tip: "Instagram" }
+    - { class: "iconfont icon-linkedin-fill", link: "https://www.linkedin.com/in/jifeng-wu-a3b7b124a/", tip: "LinkedIn" }
+    - { class: "iconfont icon-wechat-fill", link: "/static/images/wechat_qr_code.png", tip: "WeChat" }
+    - { class: "iconfont icon-twitter-fill", link: "https://x.com/jifengwu2k", tip: "X" }
 
 #---------------------------
 # 自定义页
@@ -997,21 +988,33 @@ links:
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
+      title: "Zhaowei Zhang",
+      intro: "Peking University",
+      link: "https://zowiezhang.github.io/",
       avatar: "/img/favicon.png"
     }
     - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
+      title: "Bingchu Zhao",
+      intro: "KTH",
+      link: "https://timmygiorno.github.io/",
       avatar: "/img/favicon.png"
     }
     - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
+      title: "Ziqi Rong",
+      intro: "University of Michigan",
+      link: "https://www.zqrong.com/",
+      avatar: "/img/favicon.png"
+    }
+    - {
+      title: "Jianhao Wu",
+      intro: "University of Wisconsin–Madison",
+      link: "https://rushingfox.github.io/",
+      avatar: "/img/favicon.png"
+    }
+    - {
+      title: "Hao Wang",
+      intro: "HKUST",
+      link: "https://figerhaowang.github.io/",
       avatar: "/img/favicon.png"
     }
 
