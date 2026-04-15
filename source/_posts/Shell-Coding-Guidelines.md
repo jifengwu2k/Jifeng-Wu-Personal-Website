@@ -2,10 +2,10 @@
 title: Shell Coding Guidelines
 date: 2025-09-28
 categories:
-  - "Systems"
+  - "Programming"
 tags:
   - "reference"
-  - "systems"
+  - "programming"
   - "shell"
   - "coding-guidelines"
 ---
