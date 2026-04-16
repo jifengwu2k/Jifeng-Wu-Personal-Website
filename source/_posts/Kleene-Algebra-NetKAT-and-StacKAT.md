@@ -1,5 +1,5 @@
 ---
-title: Kleene Algebra, NetKAT, and StacKAT
+title: Kleene Algebra, NetKAT, StacKAT, GKAT, CF-GKAT
 date: 2026-04-15
 updated: 2026-04-15
 categories:
@@ -66,3 +66,55 @@ StacKAT extends NetKAT:
 - It adds the following constructs to NetKAT's Kleene algebra:
   - $\operatorname{push}(v)$: Push $v$ onto stack
   - $\operatorname{pop}(v)$: Test and pop top of stack if it equals $v$
+  
+## GKAT and CF-GKAT
+
+Guarded Kleene Algebra with Tests (GKAT) is a Kleene algebra which has been widely applied for **modeling and verification** in different domains. The syntax of GKAT largely mimics that of the imperative programs, except it abstracts away the meaning of the **primitive actions and tests** of the program to enable a rich variety of semantics. Formally, GKAT expressions over a finite set of primitive tests $T$ and a finite set of primitive actions $\Sigma$ is defined as follows:
+
+$$
+\mathrm{GKAT} \ni e,f,g ::= b \in  \mathrm{BExp} \mid p \in \Sigma \mid e ; f \mid e +_b f \mid e^{(b)}
+$$
+
+$$
+\mathrm{BExp} \ni b,c ::= 0 \mid 1 \mid t \in T \mid b \land c \mid b \lor c \mid \bar{b}
+$$
+
+where:
+
+- $b \in \mathrm{BExp}$: Assertion
+  - $0$: false
+  - $1$: true
+  - $t \in T$: Primitive
+  - $b \land c$: Conjunction
+  - $b \lor c$: Disjunction
+  - $\bar{b}$: Negation
+- $p \in \Sigma$: Primitive
+- $e ; f$: Sequencing
+- $e +_b f$: If-statement
+- $e^{(b)}$ (or `while b do e`): While-loop
+
+**Control-flow GKAT (CF-GKAT)** augments GKAT with **non-local control-flow structures**, like goto and break, and indicator variables; providing a comprehensive framework to validate control-flow transformations.
+
+Similar to GKAT, the syntax of CF-GKAT is also two sorted, with the addition of common control-flow structures like indicator variable, break, continue, return, and goto's. Formally, CF-GKAT expressions are defined over a finite set of **indicator variables** $x \in X$, a finite set of **indicator values** $i \in I$, and a finite set of **labels** $l \in L$:
+
+$$
+\mathrm{CF\text{-}GKAT} \ni e,f ::= b \in \mathrm{BExp}^I \mid p \in \Sigma \mid x := i \mid e \triangleleft f \mid e ; f \mid e +_b f \mid e^{(b)} \mid \texttt{break} \mid \texttt{continue} \mid \texttt{return} \mid \texttt{goto } l \mid \texttt{label } l
+$$
+
+$$
+\mathrm{BExp}_T^I \ni b,c ::= 0 \mid 1 \mid t \in T \mid x = i \mid b \lor c \mid b \land c \mid \bar{b}
+$$
+
+
+
+The **unfolding operator** $e \triangleleft f$ is an expression for **loop unfolding**. In GCAT, it is common to assume that the loop $e^{(b)}$ can be unfolded into an if-statement: $e^{(b)} \equiv e ; e^{(b)} +_{b} 1$.
+
+However, **this identity no longer holds in CF-GKAT with the addition of `break` and `continue`**. Therefore, we introduce the unfolding operator $\triangleleft$, which satisfies the equality $e^{(b)} \equiv e \triangleleft e^{(b)} +_{b} 1$ by properly handling the `break` and `continue` within $e$.
+
+For a CF-GKAT expression $e$ to be a CF-GKAT program (or well-formed expressions), we enforce the following constraint:
+
+- Each `label l` appears at most once in the program $e$.
+- If `goto l` appears in $e$, then so does `label l`.
+- `break` or `continue` can only appear in loop, or the left side of the unfolding operator $\triangleleft$.
+- All programs end with return, i.e. a program must be either `return` or of the form $f ; \texttt{return}$.
+
