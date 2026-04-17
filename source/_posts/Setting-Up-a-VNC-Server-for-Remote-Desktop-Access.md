@@ -1,5 +1,5 @@
 ---
-title: Setting Up a Headless VNC Server for Remote Desktop Access
+title: Setting Up a VNC Server for Remote Desktop Access
 date: 2025-08-21
 categories:
   - "Systems"
@@ -20,33 +20,66 @@ However, for many professionals, researchers, and IT administrators, secure remo
 - **Work-from-home** mean you need to access graphical applications (like IDEs, simulators, and visualization tools) installed on remote lab or office machines.
 - **Remote servers without physical monitors** demand a headless-only setup - you can't just "plug in a monitor and keyboard" to start a desktop session.
 
-In these scenarios, there is **no substitute** - the need is inelastic. You must have a reliable, secure way to run and manage desktops remotely. Frustratingly, most available documentation is scattered, outdated, or omits crucial details.
+This post covers two common scenarios:
 
-That's why this guide exists: to provide you with a **direct, practical roadmap for setting up a robust remote desktop workflow**, no matter where you work.
+- **Ubuntu Desktop VNC** for sharing an already-running physical desktop session
+- **Headless VNC** for running a virtual desktop with no monitor attached
 
-## The Three Components of Headless VNC
+## Ubuntu Desktop VNC Setup Guide
 
-Three key components work together to present a remote desktop via VNC:
+This guide shows how to set up **real VNC access** on **Ubuntu Desktop**.
 
-### Xvfb (X Virtual Framebuffer)
+### Install Required Packages
 
-Xvfb is a "headless" X server that implements the X11 protocol and acts like a display server, but renders everything to memory instead of a physical monitor.
+Open a terminal and run:
 
-### x11vnc
+```bash
+sudo apt update
+sudo apt install x11vnc
+```
 
-This utility acts as a bridge, allowing VNC clients to view and interact with an existing X server session. It:
+### Identify the Display
 
-- Connects to the X server's framebuffer (in this case, Xvfb's in-memory screen)
-- Reads pixels from the X server, and writes mouse/keyboard events
-- Presents those images to a VNC client over the network, and listens for events
+For a normal Ubuntu Desktop session, the display is usually `:0`.
 
-### GUI Applications
+You can check with:
 
-These render to Xvfb's in-memory screen instead of a physical monitor via the `DISPLAY` environment variable.
+```bash
+echo $DISPLAY
+```
 
-## Step-by-Step Setup Guide
+If you are logged into the desktop normally, it will often be:
 
-### Prerequisites (Remote Host)
+```text
+:0
+```
+
+### Start the VNC Server
+
+Run:
+
+```bash
+x11vnc -display :0 -rfbport 5900 -localhost -forever -shared
+```
+
+This command:
+
+- Connects to the existing desktop session at display `:0`
+- Listens for VNC connections on port 5900
+- Restricts connections to localhost only (for security, VNC is not encrypted)
+  - **Never expose VNC directly to the public Internet!**
+- With `-forever`, x11vnc won't exit after the last client disconnects
+- With `-shared`, multiple viewers can connect if needed
+
+After running the command:
+
+- It may print informational or warning messages depending on the environment.
+- But it should **NOT** exit after running for a while. If it exits after running for a while, there's a problem to solve before moving on.
+
+
+## Headless VNC Setup Guide
+
+### Install Required Packages
 
 First, install the necessary packages on the **remote host**:
 
@@ -56,7 +89,7 @@ First, install the necessary packages on the **remote host**:
 
 **We would have to run `xvfb`, `x11vnc`, and `xterm` concurrently.** For this purpose, I recommend using `tmux` (or any other comparable tool) to manage multiple terminal windows and persistent sessions.
 
-### Start the Virtual Display (Remote Host)
+### Start the Virtual Display
 
 In your first terminal window on the remote host, start Xvfb:
 
@@ -71,7 +104,7 @@ This creates a virtual X11 display number `:1` (using TCP port 6001) with resolu
 - Port 6001 already in use (try a different display number like `:2`)
 - Permission issues with `/tmp/.X11-unix` directory. The `/tmp/.X11-unix` directory must be readable and writable. **In some environments like WSL, this directory might be read-only, which will prevent Xvfb from starting properly.**
 
-### Launch the VNC Server (Remote Host)
+### Start the VNC Server
 
 In a second terminal window on the remote host, start x11vnc:
 
@@ -89,22 +122,10 @@ This command:
 
 After running the command:
 
-- It may report **authentication or password-related errors** (which is **acceptable**).
+- It may print informational or warning messages depending on the environment.
 - But it should **NOT** exit after running for a while. If it exits after running for a while, there's a problem to solve before moving on.
 
-### Secure Access with SSH Tunneling (Local Machine)
-
-VNC is not encrypted, so we'll use SSH tunneling on your **local machine** for security.
-
-You can either use basic SSH port forwarding (which may be confusing), or [set up the `pull_remote_port.sh` wrapper](https://github.com/jifengwu2k/port-tunnel-manager) on your **local machine** to pull the remote host's port 5901 to `localhost:5901`. After **cloning its GitHub repository and completing its prerequisites**, run:
-
-```bash
-bash pull_remote_port.sh [-p <ssh_port>] -u <remote_user> -h <remote_host> -r 5901 -l 5901
-```
-
-This makes the remote host's VNC port available on your local machine via a secure SSH tunnel.
-
-### Test with a Simple Application (Remote Host)
+### Test with a Simple Application
 
 In a third terminal window on the **remote host**, launch a test application:
 
@@ -114,28 +135,6 @@ In a third terminal window on the **remote host**, launch a test application:
 export DISPLAY=:1
 xterm
 ```
-
-Now connect to your VNC server on your **local machine** using a VNC client (like TigerVNC, RealVNC, or Remmina) pointing to `localhost:5901`. You should see the xterm window.
-
-### Using Desktop Environments (Remote Host)
-
-For a full desktop experience rather than just single applications, you can install a desktop environment.
-
-#### Lightweight Options
-
-- Openbox
-- Fluxbox
-- IceWM
-- WindowMaker
-
-#### Full Desktop Environments
-
-- GNOME
-- KDE Plasma
-- MATE
-- Cinnamon
-- LXDE
-- LXQt
 
 ### Important Caveat: Single-Instance Applications
 
@@ -154,8 +153,38 @@ Solution:
 - Ensure applications aren't already running on your main desktop before launching them in your VNC session.
 - Or use a different user account for VNC access.
 
-## Conclusion
+## Secure Access with SSH Tunneling
 
-Setting up a headless VNC server might seem complex at first, but by understanding the three components (Xvfb, x11vnc, and your GUI applications) and following this recipe, you can create a reliable remote desktop solution. Remember to always use SSH tunneling for security and be mindful of single-instance applications.
+VNC is not encrypted, and in both setups `x11vnc` is configured to listen on `localhost` only, so SSH tunneling is the recommended access method for **both** setups in this post:
 
-With this setup, you can enjoy full graphical desktop access to your remote Linux machines, opening up possibilities for remote administration, development, and troubleshooting.
+- **Ubuntu Desktop**: forward remote port `5900` to local port `5900`
+- **Headless VNC**: forward remote port `5901` to local port `5901`
+
+You can either use basic SSH port forwarding (which may be confusing), or [set up the `pull_remote_port.sh` wrapper](https://github.com/jifengwu2k/port-tunnel-manager) on your **local machine** to pull the remote VNC port to `localhost`.
+
+After **cloning its GitHub repository and completing its prerequisites**, run:
+
+```bash
+bash pull_remote_port.sh [-p <ssh_port>] -u <remote_user> -h <remote_host> -r <remote_vnc_port> -l <local_port>
+```
+
+Examples:
+
+```bash
+# Ubuntu Desktop
+bash pull_remote_port.sh -u <remote_user> -h <remote_host> -r 5900 -l 5900
+
+# Headless VNC
+bash pull_remote_port.sh -u <remote_user> -h <remote_host> -r 5901 -l 5901
+```
+
+This makes the remote host's VNC port available on your local machine via a secure SSH tunnel. After setting up the port forwarding, point your VNC viewer to the corresponding local address:
+
+- `localhost:5900` for Ubuntu Desktop
+- `localhost:5901` for Headless VNC
+
+Common VNC clients:
+- TigerVNC Viewer
+- RealVNC Viewer
+- Remmina
+
