@@ -30,14 +30,17 @@ tags:
 - **Do not use `pathlib`.** Handle paths of all kinds as plain strings.
 - **Clearly separate user-facing paths from internal paths.**
   - **User-facing paths** are arbitrary strings accepted from external inputs.
-  - **Internal paths** are canonicalized strings used by internal machinery.
+  - **Internal paths** are always-valid, canonicalized, domain-specific strings used by internal machinery.
 - **API boundary rule**:
   - User-facing API functions should accept user-facing paths.
   - Internal machinery should store and use internal paths.
+  - Convert user-facing paths to internal paths at the API boundary, then use internal paths as-is. Do not repeatedly canonicalize, normalize, decode, encode, or reparse internal paths.
 - **Path syntax and semantics are context-dependent.** There is no single universal path model for all code. The meaning of a path string depends on the surrounding system and must be defined per use case.
 - **Use [`fspathverbs`](https://pypi.org/project/fspathverbs/) to convert user-facing paths into internal paths.**
   - Basic conversion pipeline: **user-facing path -> verbs -> internal path**
+    - Handle all path verbs explicitly. 
   - The exact compilation and interpretation steps vary by context.
+- **Handle links transparently.**
 
 #### User-facing vs internal paths
 
@@ -87,14 +90,6 @@ In an `http.server`-style web server, there are at least two distinct user-facin
      ```
    - Interpret those verbs relative to the internal web server root `/root/of/web/server`
    - Resulting internal path: `/root/of/web/server/path/to/resource`
-
-#### Practical rules
-
-- Keep user input in its original string form only at the boundary where it is received.
-- Convert user-facing paths to internal paths as early as practical.
-- After conversion, pass around and persist only internal paths.
-- Define the canonicalization procedure explicitly for each path domain.
-- Do not assume filesystem-style interpretation for every user-facing path string.
 
 ### Input Handling
 
