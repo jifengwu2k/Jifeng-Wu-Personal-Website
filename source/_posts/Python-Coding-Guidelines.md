@@ -12,7 +12,6 @@ tags:
 ## General Principles
 
 - **One file = one module = one purpose**: Each file must be explicitly importable as a module and serve exactly one main purpose.
-- **Portability to C++**: Code must be directly portable to C++ (avoid dynamic, Python-specific idioms).
 - Do **not** default to generic Python ecosystem "best practices" when they conflict with the user's stated project shape or these repository rules.
 - Prefer the simplest implementation that directly matches the user's wording over reusable abstraction layers added speculatively.
 
@@ -28,12 +27,74 @@ tags:
 
 ### Path Handling
 
-- The **canonical representation of filesystem paths** in code should be an **absolute list of path components** derived by applying verbs compiled with [`fspathverbs`](https://pypi.org/project/fspathverbs/) to the tokenized current working directory.
-- Treat that path component list as the authoritative path value.
-- Example on POSIX: `[u'/', u'home', u'alice', u'project', u'file.txt']` represents `/home/alice/project/file.txt`.
-- Do **not** do ad hoc string manipulation for path parsing, normalization, basename extraction, dirname extraction, separator stripping, or parent traversal.
-- Parse paths into verbs, apply the verbs, and operate on the resulting path component list.
-- Do **not** repeatedly convert back and forth between filesystem path strings and filesystem component lists within the same code path. Convert to the canonical component-list representation once, do the path logic there, and convert back to a filesystem string only at the boundary where an OS API or external interface requires it.
+- **Do not use `pathlib`.** Handle paths of all kinds as plain strings.
+- **Clearly separate user-facing paths from internal paths.**
+  - **User-facing paths** are arbitrary strings accepted from external inputs.
+  - **Internal paths** are canonicalized strings used by internal machinery.
+- **API boundary rule**:
+  - User-facing API functions should accept user-facing paths.
+  - Internal machinery should store and use internal paths.
+- **Path syntax and semantics are context-dependent.** There is no single universal path model for all code. The meaning of a path string depends on the surrounding system and must be defined per use case.
+- **Use [`fspathverbs`](https://pypi.org/project/fspathverbs/) to convert user-facing paths into internal paths.**
+  - Basic conversion pipeline: **user-facing path -> verbs -> internal path**
+  - The exact compilation and interpretation steps vary by context.
+
+#### User-facing vs internal paths
+
+- A user-facing path may be:
+  - a local filesystem path supplied by a user,
+  - a URL/HTTP path,
+  - an archive member path,
+  - or any other external path-like string defined by the application.
+- An internal path should be a canonicalized string representation suitable for stable internal use.
+- Do not mix the two concepts in naming, storage, or APIs.
+
+#### Web server example
+
+In an `http.server`-style web server, there are at least two distinct user-facing path domains:
+
+1. **Filesystem path provided when starting the server**
+   - Example user-facing path: `../../root/of/web/server`
+   - Compile to verbs:
+     ```python
+     [
+         Current(),
+         Parent(),
+         Parent(),
+         Child(child='root'),
+         Child(child='of'),
+         Child(child='web'),
+         Child(child='server')
+     ]
+     ```
+   - Interpret those verbs relative to `os.getcwd()` such as `/home/user`
+   - Resulting internal path: `/root/of/web/server`
+
+2. **HTTP request path**
+   - Example user-facing path: `/path/./to/../other-resource/../resource`
+   - Compile to verbs:
+     ```python
+     [
+         Root(root='/'),
+         Child(child='path'),
+         Current(),
+         Child(child='to'),
+         Parent(),
+         Child(child='other-resource'),
+         Parent(),
+         Child(child='resource')
+     ]
+     ```
+   - Interpret those verbs relative to the internal web server root `/root/of/web/server`
+   - Resulting internal path: `/root/of/web/server/path/to/resource`
+
+#### Practical rules
+
+- Keep user input in its original string form only at the boundary where it is received.
+- Convert user-facing paths to internal paths as early as practical.
+- After conversion, pass around and persist only internal paths.
+- Define the canonicalization procedure explicitly for each path domain.
+- Do not assume filesystem-style interpretation for every user-facing path string.
 
 ### Input Handling
 
@@ -86,7 +147,7 @@ tags:
 
 ### System API Access
 
-- The `threading` and `multiprocessing` modules are **not allowed**.
+- The `multiprocessing` module is **not allowed**.
 - Direct system calls via `ctypes` are strictly limited as follows:
   - On NT:
     - Only functions in **MSVCRT** (Microsoft C Runtime) and the standard **Win32 API** may be called.
@@ -166,7 +227,7 @@ tags:
 ### File Layout
 
 - All files start with a copyright and license block:
-  - Boilerplate: `# Copyright (c) 2025 Jifeng Wu\n# Licensed under the <license> License. See LICENSE file in the project root for full license information.`
+  - Boilerplate: `# Copyright (c) 2026 Jifeng Wu\n# Licensed under the <license> License. See LICENSE file in the project root for full license information.`
     - simple infrastructure: MIT/BSD
     - complex infra: Apache-2.0
     - applications: AGPL-3.0
