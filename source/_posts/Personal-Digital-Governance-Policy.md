@@ -7,7 +7,7 @@ categories:
 tags:
   - "essay"
 excerpt: The document explains how my digital artifacts and platforms should be organized, disclosed, and handled if I die or become incapacitated.
-sticky: 100
+sticky: 4
 ---
 
 I have uploaded **Personal Digital Governance Policy** to Zenodo:

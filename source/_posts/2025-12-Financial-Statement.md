@@ -2,7 +2,7 @@
 title: 2025-12 Financial Statement
 date: 2025-12-31
 categories:
-  - "Lifestyle"
+  - "Statements"
 tags:
   - "records"
   - "finance"

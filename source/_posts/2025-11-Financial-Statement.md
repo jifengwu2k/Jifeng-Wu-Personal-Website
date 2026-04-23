@@ -2,7 +2,7 @@
 title: "2025-11 Financial Statement"
 date: 2025-11-30
 categories:
-  - "Lifestyle"
+  - "Statements"
 tags:
   - "records"
   - "finance"

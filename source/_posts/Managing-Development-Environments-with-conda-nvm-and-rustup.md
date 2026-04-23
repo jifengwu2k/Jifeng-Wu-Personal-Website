@@ -11,7 +11,7 @@ tags:
   - "programming-languages"
   - "shell"
   - "conda"
-sticky: 25
+sticky: 1
 ---
 
 Modern development often requires more than just installing one language runtime globally and calling it a day. Installing everything system-wide quickly becomes messy, hard to reproduce, and annoying to debug. This is where command-line environment and toolchain managers come in. Three important examples are:

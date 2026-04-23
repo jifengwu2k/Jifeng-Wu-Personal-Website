@@ -1,5 +1,5 @@
 ---
-title: GitHub Portfolio
+title: Personal GitHub Portfolio
 date: 2026-04-12
 updated: 2026-04-12
 categories:
@@ -9,11 +9,11 @@ tags:
   - "software-engineering"
   - "python"
   - "c++"
-excerpt: GitHub Portfolio
-sticky: 50
+excerpt: Personal GitHub Portfolio
+sticky: 2
 ---
 
-# GitHub Portfolio
+# Personal GitHub Portfolio
 
 ## Data Structures and Algorithms
 

@@ -2,7 +2,7 @@
 title: 2026-02 Financial Statement
 date: 2026-02-06
 categories:
-  - "Lifestyle"
+  - "Statements"
 tags:
   - "records"
   - "finance"
