@@ -11,7 +11,6 @@ tags:
   - "c++"
   - "build-systems"
 excerpt: "This project explored how to lower machine-learning-oriented IR into low-level compiler IR by building a small MLIR-based compiler. The tool reads StableHLO MLIR, applies a sequence of lowering and cleanup passes, lowers the result to the MLIR LLVM dialect, translates that module to standard textual LLVM IR, and prints the final .ll-style output."
-sticky: 0.5
 ---
 
 ## Summary
