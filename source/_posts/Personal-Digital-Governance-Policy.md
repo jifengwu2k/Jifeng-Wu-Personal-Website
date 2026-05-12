@@ -159,31 +159,7 @@ Essays cover philosophical writings, life philosophy, metaphysical reflections, 
 
 ## What Trusted People Should Do If I Die or Become Incapacitated
 
-If I die or become incapacitated, trusted people should **use their best judgment** in light of clarity and good faith:
-
-- Notify relevant people:
-   - family
-   - close friends
-   - collaborators
-   - employers or institutions, if appropriate
-- Obtain access to relevant platforms:
-   - Storage platforms
-     - External hard drive
-     - rsync.net
-   - Ephemeral platforms
-     - Mobile phone
-     - Laptop
-     - Desktop
-     - Other personal computing devices
-- Read the Quipu:
-   - identify current projects
-   - identify unfinished obligations
-   - identify any information relevant to handoff
-- Read the secrets. Find instructions for accessing or managing important accounts.
-- Maintain public communication.
-- Continue or conclude ongoing work:
-   - hand off active work where possible
-   - publish or archive materials that should not be lost
+If I die or become incapacitated, trusted people should **use their best judgment** and execute [ondeath](/ondeath/).
 
 ## Outcome
 
