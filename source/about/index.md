@@ -4,7 +4,7 @@ date: 2025-05-20
 layout: about
 ---
 
-I am an ECE researcher focusing on making computer systems more efficient and accessible by bridging programming languages, compilers, and hardware.
+I make computer systems more efficient and accessible by bridging programming languages, compilers, and hardware.
 
 I obtained my Master's of Science in Computer Science from [**UBC**](https://www.ubc.ca/) working with [**Caroline Lemieux**](https://www.carolemieux.com/). My Master's thesis [**"QuAC: Quick Attribute-Centric Type Inference for Python"**](/static/pdfs/quac_oopsla_2024.pdf) (OOPSLA'24) implemented QuAC, a novel Python type inference tool that leverages attribute sets and information retrieval techniques to predict types.
 
