@@ -171,6 +171,7 @@ Posts under `source/_posts` use a controlled taxonomy.
 - `pandas`
 - `ffmpeg`
 - `networkx`
+- `neuron`
 - `ollama`
 - `ssh`
 - `vnc`
