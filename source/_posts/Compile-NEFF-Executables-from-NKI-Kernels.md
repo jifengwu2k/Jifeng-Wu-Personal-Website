@@ -155,6 +155,37 @@ hlo_artifacts/
 
 The `model.hlo_module.pb` is a serialized HLO module containing the lowered kernel graph. Each run may produce multiple modules (runtime glue, parameter loading, etc.); the kernel's module is typically the largest.
 
+------
+
+A simpler path exists for [`nkipy`](https://github.com/aws-neuron/nkipy):
+
+```python
+import numpy as np
+
+from nkipy.core.trace import NKIPyKernel
+from nkipy.third_party.xla.service import hlo_pb2
+
+
+def matmul(A, B):
+    return A.T @ B
+
+
+def extract_hlo_module(nkipy_kernel_function, hlo_file_path, sample_inputs):
+    traced_kernel = NKIPyKernel.trace(nkipy_kernel_function)
+    traced_kernel.specialize(*sample_inputs)
+
+    hlo_proto = traced_kernel._code.to_proto()
+    with open(hlo_file_path, 'wb') as f:
+        f.write(hlo_proto.SerializeToString())
+
+
+if __name__ == '__main__':
+    A = ((np.random.rand(2048, 2048) - 0.5) * 2).astype(np.float32)
+    B = ((np.random.rand(2048, 2048) - 0.5) * 2).astype(np.float32)
+
+    extract_hlo_module(matmul, 'nkipy_matmul.pb', (A, B))
+```
+
 ## 3. Compile HLO to NEFF with `neuronx-cc`
 
 `neuronx-cc` is the Neuron compiler that takes an HLO module and emits a NEFF binary. The invocation is a single command:
