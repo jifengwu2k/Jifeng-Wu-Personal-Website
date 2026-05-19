@@ -68,6 +68,15 @@ If we may meet God at any time, it is important to maintain proper conduct at al
 
 ## Professional
 
+### Work Hours
+
+- During work hours, keep the following open on your work computer at all times:
+  - Calendar
+  - Email
+  - Instant messaging
+  - Quipu
+- Use the calendar to schedule, email and instant messaging to communicate, and Quipu to record.
+
 ### Written Documents
 
 - Let important discussions be driven by a written document.
@@ -78,3 +87,7 @@ If we may meet God at any time, it is important to maintain proper conduct at al
   - Who is affected?
   - What are the tradeoffs?
   - What evidence supports this recommendation?
+
+### After Work
+
+- When you get home, focus on logistics that support work, such as packing necessities for the next day.
