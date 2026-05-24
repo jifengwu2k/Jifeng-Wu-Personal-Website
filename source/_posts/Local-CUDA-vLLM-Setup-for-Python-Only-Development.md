@@ -26,7 +26,20 @@ This is useful when you want:
 - working native extensions (`vllm._C`, etc.)
 - no full source compilation
 
-## 1. Create and activate a virtual environment
+## Install `uv`
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+## Clone `vllm`
+
+```bash
+git clone https://github.com/vllm-project/vllm.git
+cd vllm
+```
+
+## Create and activate a virtual environment
 
 From the repo root:
 
@@ -35,7 +48,7 @@ uv venv --python 3.12 --seed
 source .venv/bin/activate
 ```
 
-## 2. Inspect available nightly wheel variants
+## Inspect available nightly wheel variants
 
 Check the nightly index:
 
@@ -65,7 +78,7 @@ Notes:
 - `cu130` = CUDA 13.0 wheel variant
 - the HTML comment contains the latest built nightly commit
 
-## 3. Pick a CUDA variant
+## Pick a CUDA variant
 
 For a server with CUDA 13.0 support, use:
 
@@ -122,15 +135,15 @@ cp38-abi3
 
 That is okay for Python 3.12 because the wheel uses the stable ABI.
 
-## 4. Download the wheel file manually
+## Download the wheel file manually
 
 Using the `x86_64` entry above:
 
 ```bash
-curl -L "https://wheels.vllm.ai/287471b99442b44c5a16c4d70b0f3e178dd52732/vllm-0.21.1rc1.dev89%2Bg287471b99-cp38-abi3-manylinux_2_24_x86_64.whl" -o /tmp/vllm-cu130.whl
+curl -L "https://wheels.vllm.ai/nightly/cu130/vllm/<path>" -o /tmp/vllm-cu130.whl
 ```
 
-## 5. Sanity-check the wheel contents
+## Sanity-check the wheel contents
 
 ```bash
 python -m zipfile -l /tmp/vllm-cu130.whl | head -40
@@ -149,7 +162,7 @@ vllm/spinloop.abi3.so
 
 If you see a `BrokenPipeError` at the end because of `| head`, that is harmless.
 
-## 6. Install vLLM editable using the exact wheel file
+## Install vLLM editable using the exact wheel file
 
 Set the environment variables:
 
@@ -170,7 +183,7 @@ Why use `VLLM_PRECOMPILED_WHEEL_LOCATION`?
 - it forces the build to use the exact wheel you downloaded
 - it still installs the package in editable mode from your local repo
 
-## 7. Verify that Python loads from your clone
+## Verify that Python loads from your clone
 
 ```bash
 python -c "import vllm, inspect; print(inspect.getfile(vllm))"
@@ -184,7 +197,7 @@ Expected result:
 
 This confirms that Python code is coming from your local clone.
 
-## 8. Verify that the native extension loads
+## Verify that the native extension loads
 
 ```bash
 python -c "import vllm._C; print('ok')"
@@ -198,7 +211,7 @@ ok
 
 This confirms that the precompiled native library is usable.
 
-## 9. Verify the CLI works
+## Verify the CLI works
 
 ```bash
 vllm --help
@@ -206,7 +219,7 @@ vllm --help
 
 If this works, the setup is ready.
 
-## 10. Run the server
+## Run the server
 
 Example:
 
@@ -220,7 +233,7 @@ In another shell, test it:
 curl http://localhost:8000/v1/models
 ```
 
-## 11. Development workflow
+## Development workflow
 
 If you modify Python files under the repo, for example:
 
