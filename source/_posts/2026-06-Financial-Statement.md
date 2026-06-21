@@ -1,0 +1,52 @@
+---
+title: 2026-06 Financial Statement
+date: 2026-06-30
+categories:
+  - "Statements"
+tags:
+  - "records"
+  - "finance"
+excerpt: 2026-06 Financial Statement
+---
+
+```csv
+date,name,amount
+2026-06-01,LAMBDA CLOUD LAMBDA.AI,-1.12
+2026-06-01,Payment to Chase card,-104.62
+2026-06-01,Payment to Chase card,-14.99
+2026-06-01,WALMART.COM,-13.19
+2026-06-01,WALMART.COM,-18.37
+2026-06-01,WALMART.COM,-42.07
+2026-06-01,WALMART.COM,-8.78
+2026-06-02,Amazon web services aws.amazon.co,-1.17
+2026-06-02,WALMART.COM,-15.20
+2026-06-02,WALMART.COM,-44.66
+2026-06-03,Payment to Chase card,-5.23
+2026-06-03,WALMART.COM,-5.78
+2026-06-04,RUNPOD.IO,-10.00
+2026-06-05,AMAZON WEB SERVI PAYROLL,4339.33
+2026-06-05,Payment to Chase card,-49.33
+2026-06-08,Payment to Chase card,-20.33
+2026-06-08,Zelle payment,-36.00
+2026-06-09,Collegetown Terr Rent,-1535.00
+2026-06-09,GOOGLE *Google One,-7.99
+2026-06-09,Payment to Chase card,-52.27
+2026-06-09,WALMART.COM,-46.65
+2026-06-11,Payment to Chase card,-23.80
+2026-06-12,Payment to Chase card,-31.57
+2026-06-13,UBER *TRIP HELP.UBER.COM CA,-15.25
+2026-06-15,LAMBDA CLOUD LAMBDA.AI CA,-3.54
+2026-06-15,Payment to Chase card,-21.62
+2026-06-16,Payment to Chase card,-42.75
+2026-06-16,UBER *TRIP HELP.UBER.COM CA,-27.02
+2026-06-16,WALMART.COM 800-925-6278 AR,-38.72
+2026-06-17,GOOGLE *YouTube g.co/helppay# CA,-119.99
+2026-06-17,Payment to Chase card ending in 6502,-6.25
+2026-06-17,UBER *TRIP HELP.UBER.COM CA,-26.88
+2026-06-18,AMAZON WEB SERVI PAYROLL,4339.32
+2026-06-18,ONLINE DOMESTIC WIRE FEE,-25.00
+2026-06-18,ONLINE DOMESTIC WIRE TRANSFER VIA WELLS FARGO BANK,-1976.37
+2026-06-18,UBER *TRIP HELP.UBER.COM CA,-24.05
+```
+
+Total: 4263.09
