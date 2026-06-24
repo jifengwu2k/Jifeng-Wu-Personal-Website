@@ -54,13 +54,7 @@ Start a `tmux` session.
 Start JupyterLab in it, listening on localhost:8888, with no password/token:
 
 ```bash
-jupyter lab \
-    --ip=127.0.0.1 --port 8888 \
-    --allow-root \
-    --no-browser \
-    --IdentityProvider.token='' \
-    --ServerApp.password='' \
-    --ServerApp.allow_remote_access=True
+jupyter lab --ip=127.0.0.1 --port 8888 --allow-root --no-browser --IdentityProvider.token='' --ServerApp.password='' --ServerApp.allow_remote_access=True
 ```
 
 Then open another `tmux` pane, set up [push-pull-port](https://github.com/jifengwu2k/push-pull-port), and push port 8888 to port `$PRIVATE_PORT` (localhost only) of remote public server `$PUBLIC_HOST`:
