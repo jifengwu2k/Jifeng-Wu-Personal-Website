@@ -9,6 +9,7 @@ tags:
   - "c++"
   - "conda"
   - "build-systems"
+sticky: 0.5
 ---
 
 ## Prerequisites
@@ -260,4 +261,59 @@ cd qemu-10.2.0-rc2
   --prefix="$CONDA_PREFIX"
 make
 make install
+```
+
+### [llama.cpp](https://github.com/ggml-org/llama.cpp)
+
+A self-contained, CPU-only build inside a Conda environment.
+
+Clone and enter the source tree:
+
+```bash
+git clone https://github.com/ggml-org/llama.cpp.git
+cd llama.cpp
+```
+
+With the standard build variables set (see [Common Build Variables](#Common-Build-Variables)), backends on macOS are Metal and Accelerate — the flags below disable them explicitly so the build is guaranteed CPU-only regardless of platform.
+
+```bash
+cmake -B build -G Ninja \
+    -DBUILD_SHARED_LIBS=OFF \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX="$CONDA_PREFIX" \
+    -DGGML_METAL=OFF            \
+    -DGGML_BLAS=OFF             \
+    -DGGML_CUDA=OFF             \
+    -DGGML_HIP=OFF              \
+    -DGGML_VULKAN=OFF           \
+    -DGGML_SYCL=OFF             \
+    -DGGML_OPENCL=OFF           \
+    -DGGML_RPC=OFF              \
+    -DGGML_HEXAGON=OFF          \
+    -DGGML_ZDNN=OFF             \
+    -DGGML_NATIVE=ON            \
+    -DLLAMA_BUILD_UI=OFF        \
+    -DLLAMA_OPENSSL=OFF
+```
+
+| Flag | Role |
+|---|---|
+| `-DGGML_METAL=OFF` / `-DGGML_BLAS=OFF` | Disable Metal and Accelerate (auto-detected on macOS) |
+| `-DGGML_{CUDA,HIP,VULKAN,…}=OFF` | Explicitly disable all GPU backends |
+| `-DGGML_NATIVE=ON` | Optimise for the CPU that is building the code |
+| `-DBUILD_SHARED_LIBS=OFF` | Static linking — simpler deployment, no rpath surprises |
+
+Build and install:
+
+```bash
+ninja -C build
+cmake --install build
+```
+
+This places headers in `$CONDA_PREFIX/include/`, libraries (`libllama.a`, `libggml.a`, …) in `$CONDA_PREFIX/lib/`, and binaries (`llama-cli`, `llama-server`, …) in `$CONDA_PREFIX/bin/`.
+
+Verify:
+
+```bash
+llama-cli --help
 ```

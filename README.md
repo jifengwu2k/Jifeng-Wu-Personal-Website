@@ -153,6 +153,8 @@ Posts under `source/_posts` use a controlled taxonomy.
 - `build-systems`
 - `conferences`
 - `fourier-analysis`
+- `quantization`
+- `gguf`
 
 #### Languages, tools, and platforms
 
@@ -173,6 +175,7 @@ Posts under `source/_posts` use a controlled taxonomy.
 - `networkx`
 - `neuron`
 - `ollama`
+- `llama.cpp`
 - `ssh`
 - `vnc`
 - `vscode`
