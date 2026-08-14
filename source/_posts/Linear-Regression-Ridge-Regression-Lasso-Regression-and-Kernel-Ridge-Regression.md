@@ -1,5 +1,5 @@
 ---
-layout: pose
+layout: post
 title: >-
   Linear Regression, Ridge Regression, Lasso Regression, and Kernel Ridge
   Regression
@@ -30,16 +30,16 @@ $$\mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \boldsymbol{\varepsilon}$$
 
 where
 
-- $\mathbf{y} = {\begin{bmatrix} y_{1} \\ y_{2} \\ \vdots \\ y_{n} \end{bmatrix}}$ is a vector of $n$ observed values of the response variable.
-- $\mathbf{X} = {\begin{bmatrix} \mathbf{x}_{1}^{\mathsf{T}} \\ \mathbf{x}_{2}^{\mathsf{T}} \\ \vdots \\ \mathbf{x}_{n}^{\mathsf{T}} \end{bmatrix}} = {\begin{bmatrix} 1 & x_{1, 1} & \cdots & x_{1, p} \\ 1 & x_{2, 1} & \cdots & x_{2, p}\\ \vdots & \vdots & \ddots & \vdots \\ 1 & x_{n, 1} & \cdots & x_{n, p} \end{bmatrix}}$ is a matrix of $n$ observed $(p + 1)$-dimensional row-vectors of the explanatory variables.
-- $\boldsymbol{\beta} = {\begin{bmatrix} \beta_{0} \\ \beta_{1} \\ \beta_{2} \\ \vdots \\ \beta_{p} \end{bmatrix}}$ is a $(p + 1)$-dimensional parameter vector, whose elements, multiplied with each dimension of the explanatory variables, are known as effects or regression coefficients.
-- $\boldsymbol{\varepsilon}={\begin{bmatrix}\varepsilon_{1} \\ \varepsilon_{2} \\ \vdots \\ \varepsilon _{n} \end{bmatrix}}$ is a vector of $n$ error terms. It captures all other factors that influence $\mathbf{y}$ other than $\mathbf{X}$.
+- $\mathbf{y} = {\begin{bmatrix} y\_{1} \\\\ y\_{2} \\\\ \vdots \\\\ y\_{n} \end{bmatrix}}$ is a vector of $n$ observed values of the response variable.
+- $\mathbf{X} = {\begin{bmatrix} \mathbf{x}\_{1}^{\mathsf{T}} \\\\ \mathbf{x}\_{2}^{\mathsf{T}} \\\\ \vdots \\\\ \mathbf{x}\_{n}^{\mathsf{T}} \end{bmatrix}} = {\begin{bmatrix} 1 & x\_{1, 1} & \cdots & x\_{1, p} \\\\ 1 & x\_{2, 1} & \cdots & x\_{2, p}\\\\ \vdots & \vdots & \ddots & \vdots \\\\ 1 & x\_{n, 1} & \cdots & x\_{n, p} \end{bmatrix}}$ is a matrix of $n$ observed $(p + 1)$-dimensional row-vectors of the explanatory variables.
+- $\boldsymbol{\beta} = {\begin{bmatrix} \beta\_{0} \\\\ \beta\_{1} \\\\ \beta\_{2} \\\\ \vdots \\\\ \beta\_{p} \end{bmatrix}}$ is a $(p + 1)$-dimensional parameter vector, whose elements, multiplied with each dimension of the explanatory variables, are known as effects or regression coefficients.
+- $\boldsymbol{\varepsilon}={\begin{bmatrix}\varepsilon\_{1} \\\\ \varepsilon\_{2} \\\\ \vdots \\\\ \varepsilon \_{n} \end{bmatrix}}$ is a vector of $n$ error terms. It captures all other factors that influence $\mathbf{y}$ other than $\mathbf{X}$.
 
-Note that the first dimension of the explanatory variables is the constant 1. This is designed such that the corresponding first element of $\boldsymbol{\beta}$, $\beta_{0}$, would be the intercept after matrix multiplication. Many statistical inference procedures for linear models require an intercept to be present, so it is often included even if theoretical considerations suggest that its value should be zero.
+Note that the first dimension of the explanatory variables is the constant 1. This is designed such that the corresponding first element of $\boldsymbol{\beta}$, $\beta\_{0}$, would be the intercept after matrix multiplication. Many statistical inference procedures for linear models require an intercept to be present, so it is often included even if theoretical considerations suggest that its value should be zero.
 
 Fitting a linear model to a given data set usually requires estimating $\boldsymbol{\beta}$ such that $\boldsymbol{\varepsilon} = \mathbf{y} - \mathbf{X} \boldsymbol{\beta}$ is minimized.
 
-For example, it is common to use the sum of squared errors (known as **ordinary least squares**) $\|{\boldsymbol {\varepsilon }}\|_{2}^{2} = \|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\|_{2}^{2}$ as a loss function for minimization. This minimization problem has a unique solution, ${\hat{\boldsymbol{\beta}}} = (\mathbf{X}^{\operatorname{T}} \mathbf{X})^{-1}\mathbf{X}^{\operatorname{T}} \mathbf{y}$.
+For example, it is common to use the sum of squared errors (known as **ordinary least squares**) $\\|{\boldsymbol {\varepsilon }}\\|\_{2}^{2} = \\|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\\|\_{2}^{2}$ as a loss function for minimization. This minimization problem has a unique solution, ${\hat{\boldsymbol{\beta}}} = (\mathbf{X}^{\operatorname{T}} \mathbf{X})^{-1}\mathbf{X}^{\operatorname{T}} \mathbf{y}$.
 
 References:
 
@@ -148,13 +148,13 @@ np.linalg.inv(X.T @ X + 0.0001 * np.eye(len(X))):
  [-3999.95360059  2000.07179896]]
 ```
 
-By replacing $(\mathbf{X}^{\operatorname{T}} \mathbf{X})^{-1}$ with $(\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}$ in ${\hat{\boldsymbol{\beta}}} = (\mathbf{X}^{\operatorname{T}} \mathbf{X})^{-1}\mathbf{X}^{\operatorname{T}} \mathbf{y}$, we derive the solution to **ridge regression**, ${\hat {\beta }}_{R}=(\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}\mathbf{X} ^{\mathsf{T}}\mathbf{y}$.
+By replacing $(\mathbf{X}^{\operatorname{T}} \mathbf{X})^{-1}$ with $(\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}$ in ${\hat{\boldsymbol{\beta}}} = (\mathbf{X}^{\operatorname{T}} \mathbf{X})^{-1}\mathbf{X}^{\operatorname{T}} \mathbf{y}$, we derive the solution to **ridge regression**, ${\hat {\beta }}\_{R}=(\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}\mathbf{X} ^{\mathsf{T}}\mathbf{y}$.
 
-Ridge regression (linear regression with L2 regularization), is linear regression using ${\mathcal{L}}(\boldsymbol{\beta}, \lambda) = \|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\|_{2}^{2} + \lambda (\|{\boldsymbol{\beta}}\|_{2}^{2} - C)$ as the loss function to minimize.
+Ridge regression (linear regression with L2 regularization), is linear regression using ${\mathcal{L}}(\boldsymbol{\beta}, \lambda) = \\|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\\|\_{2}^{2} + \lambda (\\|{\boldsymbol{\beta}}\\|\_{2}^{2} - C)$ as the loss function to minimize.
 
-This is a Lagrangian function expressing the original ordinary least squares loss function $\|{\boldsymbol {\varepsilon }}\|_{2}^{2} = \|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\|_{2}^{2}$ subject to the constraint $\|{\boldsymbol{\beta}}\|_{2}^{2} \le C$ for some $C > 0$.
+This is a Lagrangian function expressing the original ordinary least squares loss function $\\|{\boldsymbol {\varepsilon }}\\|\_{2}^{2} = \\|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\\|\_{2}^{2}$ subject to the constraint $\\|{\boldsymbol{\beta}}\\|\_{2}^{2} \le C$ for some $C > 0$.
 
-Note that **by calculating ${\hat {\beta }}_{R}=(\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}\mathbf{X} ^{\mathsf{T}}\mathbf{y}$ with a given $\lambda$ value, instead of simultaneously solving for $\boldsymbol{\beta}$ and lambda through $\nabla{\mathcal{L}}(\boldsymbol{\beta}, \lambda) = 0$ (the usual practice of using Lagrangian functions for constrained optimization), we do not necessary obtain a $\boldsymbol{\beta}$ that satisfies for a given value of C. However, increasing the given $\lambda$ value monotonically decreases the value of $\|{\boldsymbol{\beta}}\|_{2}^{2}$, thus making the constraint $\|{\boldsymbol{\beta}}\|_{2}^{2} \le C$ be satisfied for smaller values of $C$**.
+Note that **by calculating ${\hat {\beta }}\_{R}=(\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}\mathbf{X} ^{\mathsf{T}}\mathbf{y}$ with a given $\lambda$ value, instead of simultaneously solving for $\boldsymbol{\beta}$ and lambda through $\nabla{\mathcal{L}}(\boldsymbol{\beta}, \lambda) = 0$ (the usual practice of using Lagrangian functions for constrained optimization), we do not necessary obtain a $\boldsymbol{\beta}$ that satisfies for a given value of C. However, increasing the given $\lambda$ value monotonically decreases the value of $\\|{\boldsymbol{\beta}}\\|\_{2}^{2}$, thus making the constraint $\\|{\boldsymbol{\beta}}\\|\_{2}^{2} \le C$ be satisfied for smaller values of $C$**.
 
 ![Image from https://math.stackexchange.com/questions/1723201/solution-for-arg-min-xt-x-1-xt-a-x-ct-x-quadratic](https://i.stack.imgur.com/YNwf5.png)
 
@@ -189,17 +189,17 @@ array([[0.0062103]])
 array([[7.92298438e-05]])
 ```
 
-Furthermore, as $\|{\boldsymbol{\beta}}\|_{2}^{2} = \beta_{0}^{2} + \beta_{1}^{2} + \cdots + \beta_{p}^{2}$, increasing the given $\lambda$ value helps to constrain the magnitude of the effects or regression coefficients corresponding to dimensions which are redundant in high-dimensional explanatory variables.
+Furthermore, as $\\|{\boldsymbol{\beta}}\\|\_{2}^{2} = \beta\_{0}^{2} + \beta\_{1}^{2} + \cdots + \beta\_{p}^{2}$, increasing the given $\lambda$ value helps to constrain the magnitude of the effects or regression coefficients corresponding to dimensions which are redundant in high-dimensional explanatory variables.
 
-This is visualized in the right diagram, where the constraint $\|{\boldsymbol{\beta}}\|_{2}^{2} \le C$ in the Lagrangian function (the green circle) tangentially touches a contour of the original ordinary least squares loss function $\|{\boldsymbol {\varepsilon }}\|_{2}^{2} = \|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\|_{2}^{2}$ at a point where one of the effects (or regression coefficients) is close to 0.
+This is visualized in the right diagram, where the constraint $\\|{\boldsymbol{\beta}}\\|\_{2}^{2} \le C$ in the Lagrangian function (the green circle) tangentially touches a contour of the original ordinary least squares loss function $\\|{\boldsymbol {\varepsilon }}\\|\_{2}^{2} = \\|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\\|\_{2}^{2}$ at a point where one of the effects (or regression coefficients) is close to 0.
 
 ![Modified from the plot used in "The Elements of Statistical Learning" by Saptashwa Bhattacharyya](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Jd03Hyt2bpEv1r7UijLlpg.png)
 
 To further strengthen this effect and completely "zero out" certain effects or regression coefficients, **lasso regression (linear regression with L1 regularization)** can be used in lieu of ridge recursion.
 
-In this case, the original ordinary least squares loss function $\|{\boldsymbol {\varepsilon }}\|_{2}^{2} = \|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\|_{2}^{2}$ subject to the constraint $\|{\boldsymbol{\beta}}\|_{1} = |\beta_{0}| + |\beta_{1}| + \cdots + |\beta_{p}| \le C$ for some $C > 0$, as depicted in the left diagram, where the constraint $\|{\boldsymbol{\beta}}\|_{1} \le C$ in the Lagrangian function (the cyan square) tangentially touches a contour of the original ordinary least squares loss function $\|{\boldsymbol {\varepsilon }}\|_{2}^{2} = \|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\|_{2}^{2}$ at a point where one of the effects (or regression coefficients) is 0.
+In this case, the original ordinary least squares loss function $\\|{\boldsymbol {\varepsilon }}\\|\_{2}^{2} = \\|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\\|\_{2}^{2}$ subject to the constraint $\\|{\boldsymbol{\beta}}\\|\_{1} = |\beta\_{0}| + |\beta\_{1}| + \cdots + |\beta\_{p}| \le C$ for some $C > 0$, as depicted in the left diagram, where the constraint $\\|{\boldsymbol{\beta}}\\|\_{1} \le C$ in the Lagrangian function (the cyan square) tangentially touches a contour of the original ordinary least squares loss function $\\|{\boldsymbol {\varepsilon }}\\|\_{2}^{2} = \\|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\\|\_{2}^{2}$ at a point where one of the effects (or regression coefficients) is 0.
 
-However, we cannot derive an analytical solution for $\boldsymbol{\beta}$ given the Lagrangian function for lasso regression (a.k.a. the loss function to minimize), ${\mathcal{L}}(\boldsymbol{\beta}, \lambda) = \|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\|_{2}^{2} + \lambda (\|{\boldsymbol{\beta}}\|_{1} - C)$. We can only iteratively solve for $\boldsymbol{\beta}$ in this case.
+However, we cannot derive an analytical solution for $\boldsymbol{\beta}$ given the Lagrangian function for lasso regression (a.k.a. the loss function to minimize), ${\mathcal{L}}(\boldsymbol{\beta}, \lambda) = \\|\mathbf{y} -\mathbf{X}{\boldsymbol{\beta}}\\|\_{2}^{2} + \lambda (\\|{\boldsymbol{\beta}}\\|\_{1} - C)$. We can only iteratively solve for $\boldsymbol{\beta}$ in this case.
 
 References:
 
@@ -214,11 +214,11 @@ References:
 
 # Kernel Ridge Regression
 
-Given the solution to ridge recursion above, ${\hat {\beta }}_{R}=(\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}\mathbf{X} ^{\mathsf{T}}\mathbf{y}$, we can predict the value of the response variable $y_{n + 1}(\mathbf{x}_{n + 1})$, given an out-of-dataset vector of explanatory variables $\mathbf{x}_{n + 1} = {\begin{bmatrix} 1 \\ x_{n + 1, 1} \\ \vdots \\ x_{n + 1, p} \end{bmatrix}}$:
+Given the solution to ridge recursion above, ${\hat {\beta }}\_{R}=(\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}\mathbf{X} ^{\mathsf{T}}\mathbf{y}$, we can predict the value of the response variable $y\_{n + 1}(\mathbf{x}\_{n + 1})$, given an out-of-dataset vector of explanatory variables $\mathbf{x}\_{n + 1} = {\begin{bmatrix} 1 \\\\ x\_{n + 1, 1} \\\\ \vdots \\\\ x\_{n + 1, p} \end{bmatrix}}$:
 
-$$y_{n + 1}(\mathbf{x}_{n + 1}) = \mathbf{x}_{n + 1}^{\mathsf{T}} {\hat {\beta }}_{R} = \mathbf{x}_{n + 1}^{\mathsf{T}} (\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}\mathbf{X} ^{\mathsf{T}}\mathbf{y}$$
+$$y\_{n + 1}(\mathbf{x}\_{n + 1}) = \mathbf{x}\_{n + 1}^{\mathsf{T}} {\hat {\beta }}\_{R} = \mathbf{x}\_{n + 1}^{\mathsf{T}} (\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}\mathbf{X} ^{\mathsf{T}}\mathbf{y}$$
 
-We can make some changes to $\mathbf{x}_{n + 1}^{\mathsf{T}} (\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}\mathbf{X} ^{\mathsf{T}}\mathbf{y}$.
+We can make some changes to $\mathbf{x}\_{n + 1}^{\mathsf{T}} (\mathbf{X} ^{\mathsf{T}} \mathbf{X} +\lambda \mathbf{I} )^{-1}\mathbf{X} ^{\mathsf{T}}\mathbf{y}$.
 
 ## Push-Through Identity
 
@@ -229,29 +229,29 @@ References:
 - http://www0.cs.ucl.ac.uk/staff/g.ridgway/mil/mil.pdf
 - https://en.wikipedia.org/wiki/Woodbury_bmatrix_identity
 
-Based on the push through identity, $\mathbf{x}_{n + 1}^{\mathsf{T}} (\mathbf{X} ^{\mathsf{T}} \mathbf{X} + \lambda \mathbf{I} )^{-1} \mathbf{X}^{\mathsf{T}} \mathbf{y} = \mathbf{x}_{n + 1}^{\mathsf{T}} \mathbf{X}^{\mathsf{T}} {(\mathbf{X} \mathbf{X}^{\mathsf{T}} + \lambda \mathbf{I})}^{-1} \mathbf{y}$.
+Based on the push through identity, $\mathbf{x}\_{n + 1}^{\mathsf{T}} (\mathbf{X} ^{\mathsf{T}} \mathbf{X} + \lambda \mathbf{I} )^{-1} \mathbf{X}^{\mathsf{T}} \mathbf{y} = \mathbf{x}\_{n + 1}^{\mathsf{T}} \mathbf{X}^{\mathsf{T}} {(\mathbf{X} \mathbf{X}^{\mathsf{T}} + \lambda \mathbf{I})}^{-1} \mathbf{y}$.
 
-As $\mathbf{X} = {\begin{bmatrix} \mathbf{x}_{1}^{\mathsf{T}} \\ \vdots \\ \mathbf{x}_{n}^{\mathsf{T}} \end{bmatrix}}$, $\mathbf{X}^{\mathsf{T}} = {\begin{bmatrix} \mathbf{x}_{1} & \cdots & \mathbf{x}_{n} \end{bmatrix}}$, we have:
+As $\mathbf{X} = {\begin{bmatrix} \mathbf{x}\_{1}^{\mathsf{T}} \\\\ \vdots \\\\ \mathbf{x}\_{n}^{\mathsf{T}} \end{bmatrix}}$, $\mathbf{X}^{\mathsf{T}} = {\begin{bmatrix} \mathbf{x}\_{1} & \cdots & \mathbf{x}\_{n} \end{bmatrix}}$, we have:
 
-- $\mathbf{x}_{n + 1}^{\mathsf{T}} \mathbf{X}^{\mathsf{T}} = {\begin{bmatrix} \mathbf{x}_{n + 1}^{\mathsf{T}} \mathbf{x}_{1} & \cdots & \mathbf{x}_{n + 1}^{\mathsf{T}} \mathbf{x}_{n} \end{bmatrix}}$
-- $\mathbf{X} \mathbf{X}^{\mathsf{T}} = {\begin{bmatrix} \mathbf{x}_{1}^{\mathsf{T}} \mathbf{x}_{1} & \cdots & \mathbf{x}_{1}^{\mathsf{T}} \mathbf{x}_{n} \\ \vdots & \ddots & \vdots \\ \mathbf{x}_{n}^{\mathsf{T}} \mathbf{x}_{1} & \cdots & \mathbf{x}_{n}^{\mathsf{T}} \mathbf{x}_{n} \end{bmatrix}}$
+- $\mathbf{x}\_{n + 1}^{\mathsf{T}} \mathbf{X}^{\mathsf{T}} = {\begin{bmatrix} \mathbf{x}\_{n + 1}^{\mathsf{T}} \mathbf{x}\_{1} & \cdots & \mathbf{x}\_{n + 1}^{\mathsf{T}} \mathbf{x}\_{n} \end{bmatrix}}$
+- $\mathbf{X} \mathbf{X}^{\mathsf{T}} = {\begin{bmatrix} \mathbf{x}\_{1}^{\mathsf{T}} \mathbf{x}\_{1} & \cdots & \mathbf{x}\_{1}^{\mathsf{T}} \mathbf{x}\_{n} \\\\ \vdots & \ddots & \vdots \\\\ \mathbf{x}\_{n}^{\mathsf{T}} \mathbf{x}\_{1} & \cdots & \mathbf{x}\_{n}^{\mathsf{T}} \mathbf{x}\_{n} \end{bmatrix}}$
 
 Thus:
 
-$$y_{n + 1}(\mathbf{x}_{n + 1}) = {\begin{bmatrix} \mathbf{x}_{n + 1}^{\mathsf{T}} \mathbf{x}_{1} & \cdots & \mathbf{x}_{n + 1}^{\mathsf{T}} \mathbf{x}_{n} \end{bmatrix}} {({\begin{bmatrix} \mathbf{x}_{1}^{\mathsf{T}} \mathbf{x}_{1} & \cdots & \mathbf{x}_{1}^{\mathsf{T}} \mathbf{x}_{n} \\ \vdots & \ddots & \vdots \\ \mathbf{x}_{n}^{\mathsf{T}} \mathbf{x}_{1} & \cdots & \mathbf{x}_{n}^{\mathsf{T}} \mathbf{x}_{n} \end{bmatrix}} + \lambda \mathbf{I})}^{-1} \mathbf{y}$$
+$$y\_{n + 1}(\mathbf{x}\_{n + 1}) = {\begin{bmatrix} \mathbf{x}\_{n + 1}^{\mathsf{T}} \mathbf{x}\_{1} & \cdots & \mathbf{x}\_{n + 1}^{\mathsf{T}} \mathbf{x}\_{n} \end{bmatrix}} {({\begin{bmatrix} \mathbf{x}\_{1}^{\mathsf{T}} \mathbf{x}\_{1} & \cdots & \mathbf{x}\_{1}^{\mathsf{T}} \mathbf{x}\_{n} \\\\ \vdots & \ddots & \vdots \\\\ \mathbf{x}\_{n}^{\mathsf{T}} \mathbf{x}\_{1} & \cdots & \mathbf{x}\_{n}^{\mathsf{T}} \mathbf{x}\_{n} \end{bmatrix}} + \lambda \mathbf{I})}^{-1} \mathbf{y}$$
 
-This means that we can calculate $y_{n + 1}(\mathbf{x}_{n + 1})$ directly from the dot products among $\mathbf{x}_{1}, \cdots, \mathbf{x}_{n}$ and the dot products between $\mathbf{x}_{n + 1}$ and $\mathbf{x}_{1}, \cdots, \mathbf{x}_{n}$, **without having to explicitly know the values of $\mathbf{x}_{1}, \cdots, \mathbf{x}_{n}$ and $\mathbf{x}_{n + 1}$**.
+This means that we can calculate $y\_{n + 1}(\mathbf{x}\_{n + 1})$ directly from the dot products among $\mathbf{x}\_{1}, \cdots, \mathbf{x}\_{n}$ and the dot products between $\mathbf{x}\_{n + 1}$ and $\mathbf{x}\_{1}, \cdots, \mathbf{x}\_{n}$, **without having to explicitly know the values of $\mathbf{x}\_{1}, \cdots, \mathbf{x}\_{n}$ and $\mathbf{x}\_{n + 1}$**.
 
 Moreover, the dot product between two vectors of explanatory variables here can be generalized to **any symmetric similarity function between two vectors of explanatory variables known as kernel functions**.
 
-Using $k(\mathbf{x}_{i}, \mathbf{x}_{j})$ to denote the similarity between $\mathbf{x}_{i}, \mathbf{x}_{j}$ under the kernel function $k$, let:
+Using $k(\mathbf{x}\_{i}, \mathbf{x}\_{j})$ to denote the similarity between $\mathbf{x}\_{i}, \mathbf{x}\_{j}$ under the kernel function $k$, let:
 
-- $\mathbf{K} = \mathbf{X} \mathbf{X}^{\mathsf{T}} = {\begin{bmatrix} k(\mathbf{x}_{1}, \mathbf{x}_{1}) & \cdots & k(\mathbf{x}_{1}, \mathbf{x}_{n}) \\ \vdots & \ddots & \vdots \\ k(\mathbf{x}_{n}, \mathbf{x}_{1}) & \cdots & k(\mathbf{x}_{n}, \mathbf{x}_{n}) \end{bmatrix}}$
-- $\mathbf{k}(\mathbf{x}_{n + 1}) = \mathbf{x}_{n + 1}^{\mathsf{T}} \mathbf{X}^{\mathsf{T}} = {\begin{bmatrix} k(\mathbf{x}_{n + 1}, \mathbf{x}_{1}) & \cdots & k(\mathbf{x}_{n + 1}, \mathbf{x}_{n}) \end{bmatrix}}$
+- $\mathbf{K} = \mathbf{X} \mathbf{X}^{\mathsf{T}} = {\begin{bmatrix} k(\mathbf{x}\_{1}, \mathbf{x}\_{1}) & \cdots & k(\mathbf{x}\_{1}, \mathbf{x}\_{n}) \\\\ \vdots & \ddots & \vdots \\\\ k(\mathbf{x}\_{n}, \mathbf{x}\_{1}) & \cdots & k(\mathbf{x}\_{n}, \mathbf{x}\_{n}) \end{bmatrix}}$
+- $\mathbf{k}(\mathbf{x}\_{n + 1}) = \mathbf{x}\_{n + 1}^{\mathsf{T}} \mathbf{X}^{\mathsf{T}} = {\begin{bmatrix} k(\mathbf{x}\_{n + 1}, \mathbf{x}\_{1}) & \cdots & k(\mathbf{x}\_{n + 1}, \mathbf{x}\_{n}) \end{bmatrix}}$
 
 We have:
 
-$$y_{n + 1}(\mathbf{x}_{n + 1}) = \mathbf{k}(\mathbf{x}_{n + 1}) {(\mathbf{K} + \lambda \mathbf{I})}^{-1} \mathbf{y}$$
+$$y\_{n + 1}(\mathbf{x}\_{n + 1}) = \mathbf{k}(\mathbf{x}\_{n + 1}) {(\mathbf{K} + \lambda \mathbf{I})}^{-1} \mathbf{y}$$
 
 There are two benefits of kernel ridge regression.
 
