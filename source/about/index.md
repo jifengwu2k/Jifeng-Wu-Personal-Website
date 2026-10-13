@@ -12,7 +12,7 @@ Before that, I obtained my Bachelor of Engineering from the [**School of Compute
 
 Outside research, I enjoy blogging, contributing to open-source projects, and mentoring students.
 
-[**Resume**](/static/pdfs/Resume.pdf)
+[**Resume**](/static/pdfs/Resume.pdf) | [**UBC Transcript**](/static/pdfs/UBC_Transcript.pdf) | [**WHU Transcript**](/static/pdfs/WHU_Transcript.pdf)
 
 Utilities: 
 

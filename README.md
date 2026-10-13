@@ -46,6 +46,7 @@ cp -r \
     "${tmpdir}/.git" \
     "${tmpdir}/.gitignore" \
     "${tmpdir}/scaffolds" \
+    "${tmpdir}/scripts" \
     "${tmpdir}/source" \
     "${tmpdir}/AGENTS.md" \
     "${tmpdir}/README.md" \
@@ -57,6 +58,11 @@ rm -rf "${tmpdir}"
 ```
 
 ## Usage
+
+Both the site root (`/`) and `/about/` render the About page directly from
+`source/about/index.md`. The `scripts/about-home.js` generator adds the root
+page. The blog post index is available at `/blog/`, including its paginated
+pages; its path is configured in `_config.yml` under `index_generator.path`.
 
 From within your project directory (`Blog`):
 
